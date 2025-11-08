@@ -1,5 +1,5 @@
 
-# **soft lockup RAID 5*
+# ** soft lockup RAID 5 **
 
 ## **Проблема**
 https://lore.kernel.org/linux-raid/29d69e586e628ef2e5f2fd7b9fe4e7062ff36ccf.camel@yandex.ru/T/#t
