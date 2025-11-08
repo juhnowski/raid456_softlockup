@@ -1,5 +1,5 @@
 
-# **soft lockup RAID 5 - Воспроизвести**
+# **soft lockup RAID 5*
 
 ## **Проблема**
 https://lore.kernel.org/linux-raid/29d69e586e628ef2e5f2fd7b9fe4e7062ff36ccf.camel@yandex.ru/T/#t
@@ -325,7 +325,7 @@ sudo virsh edit ubuntu-25.10-server
 
 ---
 
-# **soft lockup RAID 5 - Анализ**
+# **Анализ**
 Давайте разберём каждую строку из вашего лога, чтобы понять, что происходит в системе и почему возникает **soft lockup** (зависание ядра).
 
 ---
