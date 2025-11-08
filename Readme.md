@@ -3,125 +3,26 @@
 
 ## **Проблема**
 https://lore.kernel.org/linux-raid/29d69e586e628ef2e5f2fd7b9fe4e7062ff36ccf.camel@yandex.ru/T/#t
-
+https://bugzilla.kernel.org/show_bug.cgi?id=219030
 
 Существует известная в сообществе проблема локапа в ядре, возникающая при использовании RAID5 или 6 для VDO томов с включенной дедупликацией и компрессией, в момент поломки одного из дисков в группе.
+
 Баг при небольшой нагрузке воспроизводится не всегда, но при указанном профиле нагрузки fio практически в 100% случаев.
-При рассмотрении вариантов решения проблемы нужно учесть, что LVM подсистема очень активно разрабатывается, особенно в части VDO. Выяснили, что проблема зависаний известна давно, но происходит в зависимости от версий ядра в разных модулях. Модули при переходе от версии к версии имели до 60% измененных строк – то есть просто доработка кода если и возможна, велики риски что фикс не будет работать на новом ядре.
+
+При рассмотрении вариантов решения проблемы нужно учесть, что LVM подсистема очень активно разрабатывается, особенно в части VDO. Выяснили, что проблема зависаний известна давно, но происходит в зависимости от версий ядра в разных модулях. 
+
+Модули при переходе от версии к версии имели до 60% измененных строк – то есть просто доработка кода если и возможна, велики риски что фикс не будет работать на новом ядре.
 
 Минимальные шаги к воспроизведению: 
 
-1. Создать один ДеКо том выполнив скрипт 
+1. Создать один ДеКо том 
+2. Запустить
 ```bash
-./mk_raid5_manually.sh /dev/disk/by-id/scsi-35002538a47a66f20-part1 /dev/disk/by-id/scsi-35002538a67b01300-part1 /dev/disk/by-id/scsi-35002538a67b013b0-part1 
+fio ./fio_write.fio
 ```
-Состав скрипта следующий:  
-```bash
-#!/bin/bash
-
-set -exu
-
-if [ "$#" -ne 3 ]; then
-    echo "Wrong number of parameters.
-Usage: $(basename $0) disk1 disk2 disk3" 
-    exit 1
-fi
-
-# create the VG
-pvcreate -f "$1" "$2" "$3" 
-vgcreate p_r5 "$1" "$2" "$3" 
-
-# create the LV
-lvcreate --type raid5 -i 2 -L 21474836480b -I 64K -n vdo_internal_deco_vol p_r5 -y
-lvconvert -y --type vdo-pool --virtualsize 107374182400B -n deco_vol p_r5/vdo_internal_deco_vol
-```
-
-2. Запустить fio ./fio-30%write.fio. Состав конфига fio-30%write.fio следующий: Скрыть
-[test IOPS]
-blocksize=8k
-filename=/dev/p_r5/deco_vol
-filesize=100G
-direct=1
-buffered=0
-ioengine=libaio
-iodepth=32
-rw=randrw
-rwmixwrite=30
-numjobs=4
-group_reporting
-time_based
-runtime=99h
-clat_percentiles=0
-unlink=1
-
-3. Подождать 30 минут
-4. Физически (не софтверно) выдернуть диск из состава пула.
-5. Подождать 30 секунд.
-Ожидается
-В dmesg -w не появится никаких стектрейсов и записей про локап
-На самом деле
-В dmesg -w появится запись о локапе со стектрейсом
-
- 
-лог dmesg после выдергвания диска и за 25 секунд до локапа, включающий первую строку локапа (для наглядности таймингов):
-```bash
-[ 8253.360143] sd 0:0:25:0: device_block, handle(0x000e)
-[ 8255.433299] sd 0:0:25:0: device_unblock and setting to running, handle(0x000e)
-[ 8255.450981] md: super_written gets error=-19
-[ 8255.451372] md/raid:mdX: Disk failure on dm-72, disabling device.
-[ 8255.451744] md/raid:mdX: Operation continuing on 2 devices.
-[ 8255.452249] raid5_end_read_request: 20 callbacks suppressed
-[ 8255.452251] md/raid:mdX: read error not correctable (sector 31442768 on dm-72).
-[ 8255.453055] md/raid:mdX: read error not correctable (sector 28768024 on dm-72).
-[ 8255.453463] md/raid:mdX: read error not correctable (sector 28766328 on dm-72).
-[ 8255.453850] md/raid:mdX: read error not correctable (sector 3346048 on dm-72).
-[ 8255.454224] md/raid:mdX: read error not correctable (sector 28765944 on dm-72).
-[ 8255.454607] md/raid:mdX: read error not correctable (sector 28765376 on dm-72).
-[ 8255.454979] md/raid:mdX: read error not correctable (sector 28760440 on dm-72).
-[ 8255.455347] md/raid:mdX: read error not correctable (sector 28765440 on dm-72).
-[ 8255.455705] md/raid:mdX: read error not correctable (sector 28761184 on dm-72).
-[ 8255.533907] mpt3sas_cm0: mpt3sas_transport_port_remove: removed: sas_addr(0x5002538a67b01303)
-[ 8255.534367] mpt3sas_cm0: removing handle(0x000e), sas_addr(0x5002538a67b01303)
-[ 8255.534738] mpt3sas_cm0: enclosure logical id(0x50015b2140128f7f), slot(12)
-[ 8255.535098] mpt3sas_cm0: enclosure level(0x0000), connector name(     )
-[ 8280.910248] watchdog: BUG: soft lockup - CPU#22 stuck for 26s! [mdX_raid5:33820]
-```
-При этом хороший лог выдергивания (с обычным толстым 5-ым raid'ом) выглядит вот так; единственное интересное различие с «плохим», что отсутствует строка md: 
-```
-super_written gets error=-19, а вместо строки raid5_end_read_request: 20 callbacks suppressed строка md/raid:mdX: read error not correctable (sector 45788112 on dm-72).
-```
-```
-[ 2628.882710] sd 0:0:4:0: device_block, handle(0x000e)
-[ 2630.712779] sd 0:0:4:0: device_unblock and setting to running, handle(0x000e)
-[ 2630.727962] md/raid:mdX: Disk failure on dm-72, disabling device.
-[ 2630.728004] md/raid:mdX: Operation continuing on 2 devices.
-[ 2630.728005] md/raid:mdX: read error not correctable (sector 45788112 on dm-72).
-[ 2630.728030] md/raid:mdX: read error not correctable (sector 45788120 on dm-72).
-[ 2630.728064] md/raid:mdX: read error not correctable (sector 53671232 on dm-72).
-[ 2630.728066] md/raid:mdX: read error not correctable (sector 53671240 on dm-72).
-[ 2630.728074] md/raid:mdX: read error not correctable (sector 39599136 on dm-72).
-[ 2630.728076] md/raid:mdX: read error not correctable (sector 39599144 on dm-72).
-[ 2630.728082] md/raid:mdX: read error not correctable (sector 17468848 on dm-72).
-[ 2630.728084] md/raid:mdX: read error not correctable (sector 17468856 on dm-72).
-[ 2630.728106] md/raid:mdX: read error not correctable (sector 25728400 on dm-72).
-[ 2630.728108] md/raid:mdX: read error not correctable (sector 25728408 on dm-72).
-[ 2630.788427] mpt3sas_cm0: mpt3sas_transport_port_remove: removed: sas_addr(0x5002538a67b01303)
-[ 2630.788434] mpt3sas_cm0: removing handle(0x000e), sas_addr(0x5002538a67b01303)
-[ 2630.788436] mpt3sas_cm0: enclosure logical id(0x50015b2140128f7f), slot(12)
-[ 2630.788438] mpt3sas_cm0: enclosure level(0x0000), connector name(     )
-```
-репорт: https://bugzilla.kernel.org/show_bug.cgi?id=219030 Там есть нюанс что не все мэйнтейнеры принимают репорты через сайт, некоторых нужно пинговать почтовой рассылкой
-Способ выключения слота в jbod, позволяющий воспроизводить проблему без инженеров:
-```bash
-# getting the sgXX
-lsscsi -ig | grep encl
-# turning OFF slot 9
-sg_ses --dev-slot-num=9 --set=3:4:1 /dev/sg25
-# turning ON slot 9
-sg_ses --dev-slot-num=9 --clear=3:4:1 /dev/sg25
-```
-Девайс sg может меняться при перезагрузке. Так же подразумевается, что мы знаем в каком jbod из списка первой команды находится диск (актуально для воспроизведения на СХД).
- 
+3. Немного подождать
+4. Выдернуть диск из состава пула
+5. Через 30 секунд наблюдаем софт локап 
 
 ## **1. Подготовка окружения**
 
