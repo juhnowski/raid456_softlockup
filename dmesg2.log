@@ -1,0 +1,819 @@
+[    3.696965] systemd[1]: Starting systemd-udev-trigger.service - Coldplug All udev Devices...
+[    3.702720] systemd[1]: Mounted dev-hugepages.mount - Huge Pages File System.
+[    3.705408] systemd[1]: Mounted dev-mqueue.mount - POSIX Message Queue File System.
+[    3.707547] systemd[1]: Mounted run-lock.mount - Legacy Locks Directory /run/lock.
+[    3.708642] systemd[1]: Mounted sys-kernel-debug.mount - Kernel Debug File System.
+[    3.711534] systemd[1]: Mounted sys-kernel-tracing.mount - Kernel Trace File System.
+[    3.712521] systemd[1]: Mounted tmp.mount - Temporary Directory /tmp.
+[    3.714801] systemd[1]: Finished kmod-static-nodes.service - Create List of Static Device Nodes.
+[    3.715981] systemd[1]: modprobe@configfs.service: Deactivated successfully.
+[    3.716713] systemd[1]: Finished modprobe@configfs.service - Load Kernel Module configfs.
+[    3.718611] systemd[1]: modprobe@dm_multipath.service: Deactivated successfully.
+[    3.719186] systemd[1]: Finished modprobe@dm_multipath.service - Load Kernel Module dm_multipath.
+[    3.720637] systemd[1]: modprobe@drm.service: Deactivated successfully.
+[    3.721287] systemd[1]: Finished modprobe@drm.service - Load Kernel Module drm.
+[    3.723361] systemd[1]: modprobe@efi_pstore.service: Deactivated successfully.
+[    3.724008] systemd[1]: Finished modprobe@efi_pstore.service - Load Kernel Module efi_pstore.
+[    3.726713] systemd[1]: Finished lvm2-monitor.service - Monitoring of LVM2 mirrors, snapshots etc. using dmeventd or progress polling.
+[    3.727903] systemd[1]: modprobe@fuse.service: Deactivated successfully.
+[    3.728604] systemd[1]: Finished modprobe@fuse.service - Load Kernel Module fuse.
+[    3.733408] systemd[1]: Started systemd-journald.service - Journal Service.
+[    3.770994] systemd-journald[405]: Received client request to flush runtime journal.
+[    4.121911] lpc_ich 0000:00:1f.0: I/O space for GPIO uninitialized
+[    4.153394] i801_smbus 0000:00:1f.3: SMBus using PCI interrupt
+[    4.154092] i2c i2c-0: Memory type 0x07 not supported yet, not instantiating SPD
+[    4.210047] snd_hda_codec_generic hdaudioC0D0: autoconfig for Generic: line_outs=1 (0x3/0x0/0x0/0x0/0x0) type:line
+[    4.210054] snd_hda_codec_generic hdaudioC0D0:    speaker_outs=0 (0x0/0x0/0x0/0x0/0x0)
+[    4.210056] snd_hda_codec_generic hdaudioC0D0:    hp_outs=0 (0x0/0x0/0x0/0x0/0x0)
+[    4.210058] snd_hda_codec_generic hdaudioC0D0:    mono: mono_out=0x0
+[    4.210059] snd_hda_codec_generic hdaudioC0D0:    inputs:
+[    4.210060] snd_hda_codec_generic hdaudioC0D0:      Line=0x5
+[    4.220865] RAPL PMU: API unit is 2^-32 Joules, 0 fixed counters, 10737418240 ms ovfl timer
+[    4.393365] intel_rapl_msr: PL4 support detected.
+[    4.765836] EXT4-fs (vda2): mounted filesystem 384a46a8-c7b1-4bd7-8d86-6ffe7c5b3f76 r/w with ordered data mode. Quota mode: none.
+[    4.847976] audit: type=1400 audit(1762615359.708:2): apparmor="STATUS" operation="profile_load" profile="unconfined" name=4D6F6E676F444220436F6D70617373 pid=719 comm="apparmor_parser"
+[    4.848108] audit: type=1400 audit(1762615359.708:3): apparmor="STATUS" operation="profile_load" profile="unconfined" name="1password" pid=717 comm="apparmor_parser"
+[    4.848293] audit: type=1400 audit(1762615359.708:4): apparmor="STATUS" operation="profile_load" profile="unconfined" name="QtWebEngineProcess" pid=720 comm="apparmor_parser"
+[    4.848326] audit: type=1400 audit(1762615359.708:5): apparmor="STATUS" operation="profile_load" profile="unconfined" name="Discord" pid=718 comm="apparmor_parser"
+[    4.850700] audit: type=1400 audit(1762615359.711:6): apparmor="STATUS" operation="profile_load" profile="unconfined" name="balena-etcher" pid=729 comm="apparmor_parser"
+[    4.854606] audit: type=1400 audit(1762615359.714:7): apparmor="STATUS" operation="profile_load" profile="unconfined" name="bfdd" pid=730 comm="apparmor_parser"
+[    4.855171] audit: type=1400 audit(1762615359.715:8): apparmor="STATUS" operation="profile_load" profile="unconfined" name="alsamixer" pid=727 comm="apparmor_parser"
+[    4.855914] audit: type=1400 audit(1762615359.716:9): apparmor="STATUS" operation="profile_load" profile="unconfined" name="babeld" pid=728 comm="apparmor_parser"
+[    4.856893] audit: type=1400 audit(1762615359.717:10): apparmor="STATUS" operation="profile_load" profile="unconfined" name="bgpd" pid=731 comm="apparmor_parser"
+[    4.904631] cfg80211: Loading compiled-in X.509 certificates for regulatory database
+[    4.904938] Loaded X.509 cert 'sforshee: 00b28ddf47aef9cea7'
+[    4.905028] Loaded X.509 cert 'wens: 61c038651aabdcf94bd0ac7ff06c7248db18c600'
+[    5.369697] kauditd_printk_skb: 177 callbacks suppressed
+[    5.369700] audit: type=1400 audit(1762615360.224:188): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="rsyslogd" pid=934 comm="apparmor_parser"
+[    5.380338] audit: type=1400 audit(1762615360.240:189): apparmor="DENIED" operation="capable" class="cap" profile="systemd-detect-virt" pid=960 comm="systemd-detect-" capability=38  capname="perfmon"
+[    5.604252] NET: Registered PF_QIPCRTR protocol family
+[    5.693747] loop0: detected capacity change from 0 to 8
+[    5.809917] audit: type=1400 audit(1762615360.669:190): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="/usr/lib/snapd/snap-confine" pid=1063 comm="apparmor_parser"
+[    5.819182] audit: type=1400 audit(1762615360.678:191): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="/usr/lib/snapd/snap-confine//mount-namespace-capture-helper" pid=1063 comm="apparmor_parser"
+[ 2571.270359] device-mapper: raid: Superblocks created for new raid set
+[ 2571.274694] md/raid:mdX: not clean -- starting background reconstruction
+[ 2571.274713] md/raid:mdX: device dm-2 operational as raid disk 0
+[ 2571.274714] md/raid:mdX: device dm-4 operational as raid disk 1
+[ 2571.274715] md/raid:mdX: device dm-6 operational as raid disk 2
+[ 2571.275296] md/raid:mdX: raid level 5 active with 3 out of 3 devices, algorithm 2
+[ 2571.275305] device-mapper: raid: raid456 discard support disabled due to discard_zeroes_data uncertainty.
+[ 2571.275735] device-mapper: raid: Set dm-raid.devices_handle_discard_safely=Y to override.
+[ 2571.303417] mdX: bitmap file is out of date, doing full recovery
+[ 2571.305858] md: resync of RAID array mdX
+[ 2584.660303] md: mdX: resync done.
+[ 3216.587669] md/raid:mdX: device dm-2 operational as raid disk 0
+[ 3216.587673] md/raid:mdX: device dm-4 operational as raid disk 1
+[ 3216.587674] md/raid:mdX: device dm-6 operational as raid disk 2
+[ 3216.588716] md/raid:mdX: raid level 5 active with 3 out of 3 devices, algorithm 2
+[ 3216.589065] device-mapper: raid: raid456 discard support disabled due to discard_zeroes_data uncertainty.
+[ 3216.589548] device-mapper: raid: Set dm-raid.devices_handle_discard_safely=Y to override.
+[ 3216.595622] device-mapper: vdo0:lvconvert: table line: V4 /dev/dm-7 1310720 4096 32768 16380 deduplication on compression on maxDiscard 1 ack 1 bio 4 bioRotationInterval 64 cpu 2 hash 1 logical 1 physical 1
+[ 3216.595636] device-mapper: vdo0:lvconvert: loading device '252:8'
+[ 3216.595778] device-mapper: vdo0:lvconvert: zones: 1 logical, 1 physical, 1 hash; total threads: 12
+[ 3216.778600] device-mapper: vdo0:lvconvert: starting device '252:8'
+[ 3216.783201] device-mapper: vdo: vdo0:physQ0: VDO commencing normal operation
+[ 3216.783273] device-mapper: vdo: vdo0:journalQ: Setting UDS index target state to online
+[ 3216.783281] device-mapper: vdo: vdo0:dedupeQ: creating index: 252:7
+[ 3216.783286] device-mapper: vdo: vdo0:dedupeQ: Using 2 indexing zones for concurrency.
+[ 3216.783287] device-mapper: vdo0:lvconvert: device '252:8' started
+[ 3216.783289] device-mapper: vdo0:lvconvert: resuming device '252:8'
+[ 3216.792373] device-mapper: vdo0:lvconvert: device '252:8' resumed
+[ 4124.231997] workqueue: drm_fb_helper_damage_work hogged CPU for >10000us 4 times, consider switching to WQ_UNBOUND
+[ 4155.209515] workqueue: drm_fb_helper_damage_work hogged CPU for >10000us 5 times, consider switching to WQ_UNBOUND
+[ 5233.896548] md/raid:mdX: Disk failure on dm-6, disabling device.
+[ 5233.897447] md/raid:mdX: Operation continuing on 2 devices.
+[ 5259.834757] watchdog: BUG: soft lockup - CPU#1 stuck for 26s! [mdX_raid5:3222]
+[ 5259.834760] Modules linked in: dm_vdo dm_bufio lz4_compress dm_raid qrtr cfg80211 binfmt_misc intel_rapl_msr intel_rapl_common intel_uncore_frequency_common intel_pmc_core pmt_telemetry pmt_discovery pmt_class intel_pmc_ssram_telemetry intel_vsec kvm_intel kvm irqbypass rapl snd_hda_codec_generic snd_hda_intel snd_hda_codec snd_hda_core snd_intel_dspcfg snd_intel_sdw_acpi snd_hwdep snd_pcm i2c_i801 snd_timer i2c_smbus i2c_mux snd lpc_ich soundcore joydev input_leds mac_hid sch_fq_codel msr dm_multipath efi_pstore nfnetlink vsock_loopback vmw_vsock_virtio_transport_common vmw_vsock_vmci_transport vsock vmw_vmci dmi_sysfs qemu_fw_cfg ip_tables x_tables autofs4 btrfs blake2b_generic raid10 raid456 async_raid6_recov async_memcpy async_pq async_xor async_tx xor raid6_pq raid1 raid0 linear hid_generic usbhid hid polyval_clmulni ghash_clmulni_intel virtio_rng psmouse ahci virtio_gpu libahci serio_raw virtio_dma_buf aesni_intel
+[ 5259.839056] CPU: 1 UID: 0 PID: 3222 Comm: mdX_raid5 Not tainted 6.17.0-6-generic #6-Ubuntu PREEMPT(voluntary) 
+[ 5259.839058] Hardware name: QEMU Standard PC (Q35 + ICH9, 2009), BIOS 1.16.3-debian-1.16.3-2 04/01/2014
+[ 5259.839060] RIP: 0010:_raw_spin_unlock_irq+0x15/0x60
+[ 5259.839931] Code: cc cc 0f 1f 00 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 0f 1f 44 00 00 55 48 89 e5 e8 a2 00 00 00 90 fb 0f 1f 44 00 00 <65> ff 0d f4 49 b6 01 74 10 5d 31 c0 31 d2 31 c9 31 f6 31 ff c3 cc
+[ 5259.839932] RSP: 0018:ffffd3ab825e3ce0 EFLAGS: 00000246
+[ 5259.839934] RAX: 0000000000000001 RBX: ffff8a8c8f012800 RCX: 0000000000000000
+[ 5259.839935] RDX: ffff8a8c81ad9ae0 RSI: 0000000000000000 RDI: ffff8a8c8f01281c
+[ 5259.839935] RBP: ffffd3ab825e3ce0 R08: 0000000000000000 R09: 0000000000000000
+[ 5259.839936] R10: 0000000000000000 R11: 0000000000000000 R12: 0000000000000005
+[ 5259.839936] R13: ffff8a8c8f01281c R14: 0000000000000000 R15: 0000000000000000
+[ 5259.839937] FS:  0000000000000000(0000) GS:ffff8a8d43aff000(0000) knlGS:0000000000000000
+[ 5259.839938] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[ 5259.839939] CR2: 0000000042b1d000 CR3: 000000017e440003 CR4: 0000000000772ef0
+[ 5259.839942] PKRU: 55555554
+[ 5259.839943] Call Trace:
+[ 5259.839944]  <TASK>
+[ 5259.839947]  raid5_get_active_stripe+0x163/0x310 [raid456]
+[ 5259.839953]  ? do_release_stripe+0x211/0x3c0 [raid456]
+[ 5259.840121]  raid5d+0x2d0/0x650 [raid456]
+[ 5259.840126]  md_thread+0x9f/0x1b0
+[ 5259.840414]  ? __pfx_autoremove_wake_function+0x10/0x10
+[ 5259.840972]  ? __pfx_md_thread+0x10/0x10
+[ 5259.840974]  kthread+0x108/0x220
+[ 5259.841088]  ? __pfx_kthread+0x10/0x10
+[ 5259.841089]  ret_from_fork+0x131/0x150
+[ 5259.841363]  ? __pfx_kthread+0x10/0x10
+[ 5259.841364]  ret_from_fork_asm+0x1a/0x30
+[ 5259.841595]  </TASK>
+[ 5287.835132] watchdog: BUG: soft lockup - CPU#1 stuck for 52s! [mdX_raid5:3222]
+[ 5287.835135] Modules linked in: dm_vdo dm_bufio lz4_compress dm_raid qrtr cfg80211 binfmt_misc intel_rapl_msr intel_rapl_common intel_uncore_frequency_common intel_pmc_core pmt_telemetry pmt_discovery pmt_class intel_pmc_ssram_telemetry intel_vsec kvm_intel kvm irqbypass rapl snd_hda_codec_generic snd_hda_intel snd_hda_codec snd_hda_core snd_intel_dspcfg snd_intel_sdw_acpi snd_hwdep snd_pcm i2c_i801 snd_timer i2c_smbus i2c_mux snd lpc_ich soundcore joydev input_leds mac_hid sch_fq_codel msr dm_multipath efi_pstore nfnetlink vsock_loopback vmw_vsock_virtio_transport_common vmw_vsock_vmci_transport vsock vmw_vmci dmi_sysfs qemu_fw_cfg ip_tables x_tables autofs4 btrfs blake2b_generic raid10 raid456 async_raid6_recov async_memcpy async_pq async_xor async_tx xor raid6_pq raid1 raid0 linear hid_generic usbhid hid polyval_clmulni ghash_clmulni_intel virtio_rng psmouse ahci virtio_gpu libahci serio_raw virtio_dma_buf aesni_intel
+[ 5287.835171] CPU: 1 UID: 0 PID: 3222 Comm: mdX_raid5 Tainted: G             L      6.17.0-6-generic #6-Ubuntu PREEMPT(voluntary) 
+[ 5287.835173] Tainted: [L]=SOFTLOCKUP
+[ 5287.835174] Hardware name: QEMU Standard PC (Q35 + ICH9, 2009), BIOS 1.16.3-debian-1.16.3-2 04/01/2014
+[ 5287.835175] RIP: 0010:_raw_spin_unlock_irq+0x15/0x60
+[ 5287.835181] Code: cc cc 0f 1f 00 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 0f 1f 44 00 00 55 48 89 e5 e8 a2 00 00 00 90 fb 0f 1f 44 00 00 <65> ff 0d f4 49 b6 01 74 10 5d 31 c0 31 d2 31 c9 31 f6 31 ff c3 cc
+[ 5287.835182] RSP: 0018:ffffd3ab825e3ce0 EFLAGS: 00000246
+[ 5287.835183] RAX: 0000000000000001 RBX: ffff8a8c8f012800 RCX: 0000000000000000
+[ 5287.835184] RDX: ffff8a8c81ad9ae0 RSI: 0000000000000000 RDI: ffff8a8c8f01281c
+[ 5287.835184] RBP: ffffd3ab825e3ce0 R08: 0000000000000000 R09: 0000000000000000
+[ 5287.835185] R10: 0000000000000000 R11: 0000000000000000 R12: 0000000000000005
+[ 5287.835185] R13: ffff8a8c8f01281c R14: 0000000000000000 R15: 0000000000000000
+[ 5287.835186] FS:  0000000000000000(0000) GS:ffff8a8d43aff000(0000) knlGS:0000000000000000
+[ 5287.835187] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[ 5287.835187] CR2: 0000000042b1d000 CR3: 000000017e440003 CR4: 0000000000772ef0
+[ 5287.835190] PKRU: 55555554
+[ 5287.835191] Call Trace:
+[ 5287.835192]  <TASK>
+[ 5287.835196]  raid5_get_active_stripe+0x163/0x310 [raid456]
+[ 5287.835201]  ? do_release_stripe+0x211/0x3c0 [raid456]
+[ 5287.835205]  raid5d+0x2d0/0x650 [raid456]
+[ 5287.835209]  md_thread+0x9f/0x1b0
+[ 5287.835211]  ? __pfx_autoremove_wake_function+0x10/0x10
+[ 5287.835214]  ? __pfx_md_thread+0x10/0x10
+[ 5287.835215]  kthread+0x108/0x220
+[ 5287.835217]  ? __pfx_kthread+0x10/0x10
+[ 5287.835218]  ret_from_fork+0x131/0x150
+[ 5287.835220]  ? __pfx_kthread+0x10/0x10
+[ 5287.835221]  ret_from_fork_asm+0x1a/0x30
+[ 5287.835224]  </TASK>
+[ 5315.835506] watchdog: BUG: soft lockup - CPU#1 stuck for 78s! [mdX_raid5:3222]
+[ 5315.835510] Modules linked in: dm_vdo dm_bufio lz4_compress dm_raid qrtr cfg80211 binfmt_misc intel_rapl_msr intel_rapl_common intel_uncore_frequency_common intel_pmc_core pmt_telemetry pmt_discovery pmt_class intel_pmc_ssram_telemetry intel_vsec kvm_intel kvm irqbypass rapl snd_hda_codec_generic snd_hda_intel snd_hda_codec snd_hda_core snd_intel_dspcfg snd_intel_sdw_acpi snd_hwdep snd_pcm i2c_i801 snd_timer i2c_smbus i2c_mux snd lpc_ich soundcore joydev input_leds mac_hid sch_fq_codel msr dm_multipath efi_pstore nfnetlink vsock_loopback vmw_vsock_virtio_transport_common vmw_vsock_vmci_transport vsock vmw_vmci dmi_sysfs qemu_fw_cfg ip_tables x_tables autofs4 btrfs blake2b_generic raid10 raid456 async_raid6_recov async_memcpy async_pq async_xor async_tx xor raid6_pq raid1 raid0 linear hid_generic usbhid hid polyval_clmulni ghash_clmulni_intel virtio_rng psmouse ahci virtio_gpu libahci serio_raw virtio_dma_buf aesni_intel
+[ 5315.835540] CPU: 1 UID: 0 PID: 3222 Comm: mdX_raid5 Tainted: G             L      6.17.0-6-generic #6-Ubuntu PREEMPT(voluntary) 
+[ 5315.835542] Tainted: [L]=SOFTLOCKUP
+[ 5315.835542] Hardware name: QEMU Standard PC (Q35 + ICH9, 2009), BIOS 1.16.3-debian-1.16.3-2 04/01/2014
+[ 5315.835543] RIP: 0010:raid5_release_stripe+0x8e/0x150 [raid456]
+[ 5315.835551] Code: 41 5e 5d 31 c0 31 d2 31 c9 31 f6 31 ff 45 31 c0 c3 cc cc cc cc 49 8b 40 28 48 83 b8 80 01 00 00 00 74 40 f0 48 0f ba 69 48 12 <72> 37 49 8b 80 a0 02 00 00 48 8d 71 20 49 8d 90 a0 02 00 00 48 89
+[ 5315.835552] RSP: 0018:ffffd3ab825e3d20 EFLAGS: 00000282
+[ 5315.835553] RAX: ffff8a8c8d03f058 RBX: ffff8a8c81ad9ae0 RCX: ffff8a8c81ad9ae0
+[ 5315.835554] RDX: 0000000000000000 RSI: 0000000000000000 RDI: ffff8a8c81ad9ae0
+[ 5315.835554] RBP: ffffd3ab825e3d60 R08: ffff8a8c8f012800 R09: 0000000000000000
+[ 5315.835555] R10: 0000000000000000 R11: 0000000000000000 R12: 0000000000000000
+[ 5315.835555] R13: ffff8a8cf6e9b928 R14: 0000000000000002 R15: 00000000008d7c28
+[ 5315.835556] FS:  0000000000000000(0000) GS:ffff8a8d43aff000(0000) knlGS:0000000000000000
+[ 5315.835557] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[ 5315.835558] CR2: 0000000042b1d000 CR3: 000000017e440003 CR4: 0000000000772ef0
+[ 5315.835560] PKRU: 55555554
+[ 5315.835561] Call Trace:
+[ 5315.835562]  <TASK>
+[ 5315.835565]  raid5d+0x330/0x650 [raid456]
+[ 5315.835570]  md_thread+0x9f/0x1b0
+[ 5315.835573]  ? __pfx_autoremove_wake_function+0x10/0x10
+[ 5315.835576]  ? __pfx_md_thread+0x10/0x10
+[ 5315.835577]  kthread+0x108/0x220
+[ 5315.835579]  ? __pfx_kthread+0x10/0x10
+[ 5315.835580]  ret_from_fork+0x131/0x150
+[ 5315.835582]  ? __pfx_kthread+0x10/0x10
+[ 5315.835583]  ret_from_fork_asm+0x1a/0x30
+[ 5315.835585]  </TASK>
+[ 5343.835881] watchdog: BUG: soft lockup - CPU#1 stuck for 104s! [mdX_raid5:3222]
+[ 5343.835885] Modules linked in: dm_vdo dm_bufio lz4_compress dm_raid qrtr cfg80211 binfmt_misc intel_rapl_msr intel_rapl_common intel_uncore_frequency_common intel_pmc_core pmt_telemetry pmt_discovery pmt_class intel_pmc_ssram_telemetry intel_vsec kvm_intel kvm irqbypass rapl snd_hda_codec_generic snd_hda_intel snd_hda_codec snd_hda_core snd_intel_dspcfg snd_intel_sdw_acpi snd_hwdep snd_pcm i2c_i801 snd_timer i2c_smbus i2c_mux snd lpc_ich soundcore joydev input_leds mac_hid sch_fq_codel msr dm_multipath efi_pstore nfnetlink vsock_loopback vmw_vsock_virtio_transport_common vmw_vsock_vmci_transport vsock vmw_vmci dmi_sysfs qemu_fw_cfg ip_tables x_tables autofs4 btrfs blake2b_generic raid10 raid456 async_raid6_recov async_memcpy async_pq async_xor async_tx xor raid6_pq raid1 raid0 linear hid_generic usbhid hid polyval_clmulni ghash_clmulni_intel virtio_rng psmouse ahci virtio_gpu libahci serio_raw virtio_dma_buf aesni_intel
+[ 5343.835915] CPU: 1 UID: 0 PID: 3222 Comm: mdX_raid5 Tainted: G             L      6.17.0-6-generic #6-Ubuntu PREEMPT(voluntary) 
+[ 5343.835917] Tainted: [L]=SOFTLOCKUP
+[ 5343.835918] Hardware name: QEMU Standard PC (Q35 + ICH9, 2009), BIOS 1.16.3-debian-1.16.3-2 04/01/2014
+[ 5343.835919] RIP: 0010:_raw_spin_unlock_irq+0x15/0x60
+[ 5343.835924] Code: cc cc 0f 1f 00 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 0f 1f 44 00 00 55 48 89 e5 e8 a2 00 00 00 90 fb 0f 1f 44 00 00 <65> ff 0d f4 49 b6 01 74 10 5d 31 c0 31 d2 31 c9 31 f6 31 ff c3 cc
+[ 5343.835925] RSP: 0018:ffffd3ab825e3d60 EFLAGS: 00000246
+[ 5343.835926] RAX: 0000000000000001 RBX: ffff8a8c8f012c10 RCX: 0000000000000000
+[ 5343.835927] RDX: 0000000000000000 RSI: 0000000000000000 RDI: ffff8a8c8f012b04
+[ 5343.835927] RBP: ffffd3ab825e3d60 R08: 0000000000000000 R09: 0000000000000000
+[ 5343.835927] R10: 0000000000000000 R11: 0000000000000000 R12: 0000000000000000
+[ 5343.835928] R13: ffff8a8cf6e9b928 R14: ffff8a8c8f012800 R15: ffff8a8c8f0128c8
+[ 5343.835929] FS:  0000000000000000(0000) GS:ffff8a8d43aff000(0000) knlGS:0000000000000000
+[ 5343.835929] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[ 5343.835930] CR2: 0000000042b1d000 CR3: 000000017e440003 CR4: 0000000000772ef0
+[ 5343.835933] PKRU: 55555554
+[ 5343.835934] Call Trace:
+[ 5343.835935]  <TASK>
+[ 5343.835938]  raid5d+0x1fd/0x650 [raid456]
+[ 5343.835944]  md_thread+0x9f/0x1b0
+[ 5343.835947]  ? __pfx_autoremove_wake_function+0x10/0x10
+[ 5343.835950]  ? __pfx_md_thread+0x10/0x10
+[ 5343.835951]  kthread+0x108/0x220
+[ 5343.835953]  ? __pfx_kthread+0x10/0x10
+[ 5343.835954]  ret_from_fork+0x131/0x150
+[ 5343.835956]  ? __pfx_kthread+0x10/0x10
+[ 5343.835957]  ret_from_fork_asm+0x1a/0x30
+[ 5343.835959]  </TASK>
+[ 5371.836255] watchdog: BUG: soft lockup - CPU#1 stuck for 130s! [mdX_raid5:3222]
+[ 5371.836259] Modules linked in: dm_vdo dm_bufio lz4_compress dm_raid qrtr cfg80211 binfmt_misc intel_rapl_msr intel_rapl_common intel_uncore_frequency_common intel_pmc_core pmt_telemetry pmt_discovery pmt_class intel_pmc_ssram_telemetry intel_vsec kvm_intel kvm irqbypass rapl snd_hda_codec_generic snd_hda_intel snd_hda_codec snd_hda_core snd_intel_dspcfg snd_intel_sdw_acpi snd_hwdep snd_pcm i2c_i801 snd_timer i2c_smbus i2c_mux snd lpc_ich soundcore joydev input_leds mac_hid sch_fq_codel msr dm_multipath efi_pstore nfnetlink vsock_loopback vmw_vsock_virtio_transport_common vmw_vsock_vmci_transport vsock vmw_vmci dmi_sysfs qemu_fw_cfg ip_tables x_tables autofs4 btrfs blake2b_generic raid10 raid456 async_raid6_recov async_memcpy async_pq async_xor async_tx xor raid6_pq raid1 raid0 linear hid_generic usbhid hid polyval_clmulni ghash_clmulni_intel virtio_rng psmouse ahci virtio_gpu libahci serio_raw virtio_dma_buf aesni_intel
+[ 5371.836287] CPU: 1 UID: 0 PID: 3222 Comm: mdX_raid5 Tainted: G             L      6.17.0-6-generic #6-Ubuntu PREEMPT(voluntary) 
+[ 5371.836289] Tainted: [L]=SOFTLOCKUP
+[ 5371.836289] Hardware name: QEMU Standard PC (Q35 + ICH9, 2009), BIOS 1.16.3-debian-1.16.3-2 04/01/2014
+[ 5371.836290] RIP: 0010:raid5_release_stripe+0xae/0x150 [raid456]
+[ 5371.836298] Code: 00 74 40 f0 48 0f ba 69 48 12 72 37 49 8b 80 a0 02 00 00 48 8d 71 20 49 8d 90 a0 02 00 00 48 89 41 20 48 89 c7 f0 48 0f b1 32 <75> f2 48 85 ff 75 98 49 8b 40 28 48 8b b8 80 01 00 00 e8 1b 07 bb
+[ 5371.836299] RSP: 0018:ffffd3ab825e3d20 EFLAGS: 00000246
+[ 5371.836300] RAX: 0000000000000000 RBX: ffff8a8c81ad9ae0 RCX: ffff8a8c81ad9ae0
+[ 5371.836301] RDX: ffff8a8c8f012aa0 RSI: ffff8a8c81ad9b00 RDI: 0000000000000000
+[ 5371.836301] RBP: ffffd3ab825e3d60 R08: ffff8a8c8f012800 R09: 0000000000000000
+[ 5371.836302] R10: 0000000000000000 R11: 0000000000000000 R12: 0000000000000000
+[ 5371.836302] R13: ffff8a8cf6e9b928 R14: 0000000000000002 R15: 00000000008d7c28
+[ 5371.836303] FS:  0000000000000000(0000) GS:ffff8a8d43aff000(0000) knlGS:0000000000000000
+[ 5371.836304] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[ 5371.836304] CR2: 0000000042b1d000 CR3: 000000017e440003 CR4: 0000000000772ef0
+[ 5371.836307] PKRU: 55555554
+[ 5371.836308] Call Trace:
+[ 5371.836309]  <TASK>
+[ 5371.836312]  raid5d+0x330/0x650 [raid456]
+[ 5371.836317]  md_thread+0x9f/0x1b0
+[ 5371.836320]  ? __pfx_autoremove_wake_function+0x10/0x10
+[ 5371.836322]  ? __pfx_md_thread+0x10/0x10
+[ 5371.836323]  kthread+0x108/0x220
+[ 5371.836325]  ? __pfx_kthread+0x10/0x10
+[ 5371.836326]  ret_from_fork+0x131/0x150
+[ 5371.836328]  ? __pfx_kthread+0x10/0x10
+[ 5371.836329]  ret_from_fork_asm+0x1a/0x30
+[ 5371.836331]  </TASK>
+[ 5399.836635] watchdog: BUG: soft lockup - CPU#1 stuck for 156s! [mdX_raid5:3222]
+[ 5399.836644] Modules linked in: dm_vdo dm_bufio lz4_compress dm_raid qrtr cfg80211 binfmt_misc intel_rapl_msr intel_rapl_common intel_uncore_frequency_common intel_pmc_core pmt_telemetry pmt_discovery pmt_class intel_pmc_ssram_telemetry intel_vsec kvm_intel kvm irqbypass rapl snd_hda_codec_generic snd_hda_intel snd_hda_codec snd_hda_core snd_intel_dspcfg snd_intel_sdw_acpi snd_hwdep snd_pcm i2c_i801 snd_timer i2c_smbus i2c_mux snd lpc_ich soundcore joydev input_leds mac_hid sch_fq_codel msr dm_multipath efi_pstore nfnetlink vsock_loopback vmw_vsock_virtio_transport_common vmw_vsock_vmci_transport vsock vmw_vmci dmi_sysfs qemu_fw_cfg ip_tables x_tables autofs4 btrfs blake2b_generic raid10 raid456 async_raid6_recov async_memcpy async_pq async_xor async_tx xor raid6_pq raid1 raid0 linear hid_generic usbhid hid polyval_clmulni ghash_clmulni_intel virtio_rng psmouse ahci virtio_gpu libahci serio_raw virtio_dma_buf aesni_intel
+[ 5399.836691] CPU: 1 UID: 0 PID: 3222 Comm: mdX_raid5 Tainted: G             L      6.17.0-6-generic #6-Ubuntu PREEMPT(voluntary) 
+[ 5399.836694] Tainted: [L]=SOFTLOCKUP
+[ 5399.836694] Hardware name: QEMU Standard PC (Q35 + ICH9, 2009), BIOS 1.16.3-debian-1.16.3-2 04/01/2014
+[ 5399.836696] RIP: 0010:raid5_compute_sector+0x3b/0x480 [raid456]
+[ 5399.836705] Code: 48 89 cb 85 d2 0f 84 89 00 00 00 44 8b 57 68 8b 4f 64 44 8b 5f 60 89 ce 31 d2 45 89 d9 44 2b 4f 40 48 f7 f6 44 89 ce 49 89 d4 <31> d2 48 f7 f6 89 13 48 89 c6 8b 47 34 49 89 d5 83 f8 05 0f 84 d4
+[ 5399.836706] RSP: 0018:ffffd3ab825e3d48 EFLAGS: 00000202
+[ 5399.836707] RAX: 0000000000011af8 RBX: ffffd3ab825e3dd0 RCX: 0000000000000080
+[ 5399.836708] RDX: 0000000000000028 RSI: 0000000000000002 RDI: ffff8a8c8f012800
+[ 5399.836709] RBP: ffffd3ab825e3d60 R08: 0000000000000000 R09: 0000000000000002
+[ 5399.836709] R10: 0000000000000002 R11: 0000000000000003 R12: 0000000000000028
+[ 5399.836710] R13: ffff8a8cf6e9b928 R14: ffff8a8c8f012800 R15: 00000000008d7c28
+[ 5399.836711] FS:  0000000000000000(0000) GS:ffff8a8d43aff000(0000) knlGS:0000000000000000
+[ 5399.836712] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[ 5399.836712] CR2: 0000000042b1d000 CR3: 000000017e440003 CR4: 0000000000772ef0
+[ 5399.836715] PKRU: 55555554
+[ 5399.836716] Call Trace:
+[ 5399.836718]  <TASK>
+[ 5399.836723]  raid5d+0x21c/0x650 [raid456]
+[ 5399.836729]  md_thread+0x9f/0x1b0
+[ 5399.836738]  ? __pfx_autoremove_wake_function+0x10/0x10
+[ 5399.836743]  ? __pfx_md_thread+0x10/0x10
+[ 5399.836744]  kthread+0x108/0x220
+[ 5399.836748]  ? __pfx_kthread+0x10/0x10
+[ 5399.836749]  ret_from_fork+0x131/0x150
+[ 5399.836754]  ? __pfx_kthread+0x10/0x10
+[ 5399.836755]  ret_from_fork_asm+0x1a/0x30
+[ 5399.836758]  </TASK>
+[ 5407.546817] INFO: task vdo0:bioQ0:3247 blocked for more than 122 seconds.
+[ 5407.547413]       Tainted: G             L      6.17.0-6-generic #6-Ubuntu
+[ 5407.547750] "echo 0 > /proc/sys/kernel/hung_task_timeout_secs" disables this message.
+[ 5407.548021] task:vdo0:bioQ0      state:D stack:0     pid:3247  tgid:3247  ppid:2      task_flags:0x208040 flags:0x00004000
+[ 5407.548028] Call Trace:
+[ 5407.548030]  <TASK>
+[ 5407.548034]  __schedule+0x2ed/0x7c0
+[ 5407.573026]  ? __pfx_bit_wait+0x10/0x10
+[ 5407.573029]  schedule+0x27/0x90
+[ 5407.573031]  bit_wait+0x11/0x80
+[ 5407.573034]  __wait_on_bit+0x2d/0xa0
+[ 5407.573036]  ? _raw_spin_unlock_irq+0xe/0x60
+[ 5407.573039]  out_of_line_wait_on_bit+0x8e/0xc0
+[ 5407.573041]  ? __pfx_wake_bit_function+0x10/0x10
+[ 5407.573137]  make_stripe_request+0x496/0x520 [raid456]
+[ 5407.573146]  raid5_make_request+0x18c/0x4d0 [raid456]
+[ 5407.573151]  ? __pfx_woken_wake_function+0x10/0x10
+[ 5407.573155]  md_handle_request+0x153/0x280
+[ 5407.573163]  raid_map+0x36/0x70 [dm_raid]
+[ 5407.573165]  __map_bio+0x1d3/0x200
+[ 5407.573300]  ? alloc_io+0x2b/0x120
+[ 5407.573313]  dm_split_and_process_bio+0x197/0x6f0
+[ 5407.573316]  ? wake_up_process+0x15/0x30
+[ 5407.573462]  dm_submit_bio+0x4e/0x140
+[ 5407.573466]  __submit_bio+0x19c/0x290
+[ 5407.573928]  __submit_bio_noacct+0x90/0x220
+[ 5407.573931]  ? ktime_get+0x3e/0x100
+[ 5407.574409]  submit_bio_noacct_nocheck+0x203/0x240
+[ 5407.574411]  ? _raw_spin_unlock+0xe/0x40
+[ 5407.574414]  ? bio_associate_blkg_from_css+0xf8/0x360
+[ 5407.574620]  submit_bio_noacct+0x177/0x5e0
+[ 5407.574623]  send_bio_to_device+0x8b/0xe0 [dm_vdo]
+[ 5407.576549]  submit_data_vio+0xbc/0x110 [dm_vdo]
+[ 5407.576564]  service_work_queue+0xb6/0x2c0 [dm_vdo]
+[ 5407.576580]  ? __pfx_autoremove_wake_function+0x10/0x10
+[ 5407.576582]  ? __pfx_work_queue_runner+0x10/0x10 [dm_vdo]
+[ 5407.576596]  work_queue_runner+0x1e/0x30 [dm_vdo]
+[ 5407.576608]  kthread+0x108/0x220
+[ 5407.576611]  ? __pfx_kthread+0x10/0x10
+[ 5407.576613]  ret_from_fork+0x131/0x150
+[ 5407.576617]  ? __pfx_kthread+0x10/0x10
+[ 5407.576618]  ret_from_fork_asm+0x1a/0x30
+[ 5407.576622]  </TASK>
+[ 5407.576625] INFO: task vdo0:bioQ1:3248 blocked for more than 122 seconds.
+[ 5407.576876]       Tainted: G             L      6.17.0-6-generic #6-Ubuntu
+[ 5407.577073] "echo 0 > /proc/sys/kernel/hung_task_timeout_secs" disables this message.
+[ 5407.577274] task:vdo0:bioQ1      state:D stack:0     pid:3248  tgid:3248  ppid:2      task_flags:0x208040 flags:0x00004000
+[ 5407.577279] Call Trace:
+[ 5407.577281]  <TASK>
+[ 5407.577282]  __schedule+0x2ed/0x7c0
+[ 5407.577286]  schedule+0x27/0x90
+[ 5407.577288]  md_handle_request+0xfe/0x280
+[ 5407.577290]  ? __pfx_autoremove_wake_function+0x10/0x10
+[ 5407.577293]  raid_map+0x36/0x70 [dm_raid]
+[ 5407.577295]  __map_bio+0x1d3/0x200
+[ 5407.577298]  ? alloc_io+0x2b/0x120
+[ 5407.577300]  dm_split_and_process_bio+0x197/0x6f0
+[ 5407.577316]  ? wake_up_process+0x15/0x30
+[ 5407.577318]  dm_submit_bio+0x4e/0x140
+[ 5407.577321]  __submit_bio+0x19c/0x290
+[ 5407.577323]  __submit_bio_noacct+0x90/0x220
+[ 5407.577325]  ? ktime_get+0x3e/0x100
+[ 5407.577327]  submit_bio_noacct_nocheck+0x203/0x240
+[ 5407.577329]  ? _raw_spin_unlock+0xe/0x40
+[ 5407.577331]  ? bio_associate_blkg_from_css+0xf8/0x360
+[ 5407.577334]  submit_bio_noacct+0x177/0x5e0
+[ 5407.577336]  send_bio_to_device+0x8b/0xe0 [dm_vdo]
+[ 5407.577350]  submit_data_vio+0xbc/0x110 [dm_vdo]
+[ 5407.577364]  service_work_queue+0xb6/0x2c0 [dm_vdo]
+[ 5407.577376]  ? __pfx_autoremove_wake_function+0x10/0x10
+[ 5407.577378]  ? __pfx_work_queue_runner+0x10/0x10 [dm_vdo]
+[ 5407.577391]  work_queue_runner+0x1e/0x30 [dm_vdo]
+[ 5407.577403]  kthread+0x108/0x220
+[ 5407.577405]  ? __pfx_kthread+0x10/0x10
+[ 5407.577407]  ret_from_fork+0x131/0x150
+[ 5407.577410]  ? __pfx_kthread+0x10/0x10
+[ 5407.577412]  ret_from_fork_asm+0x1a/0x30
+[ 5407.577414]  </TASK>
+[ 5407.577415] INFO: task vdo0:bioQ2:3249 blocked for more than 122 seconds.
+[ 5407.577633]       Tainted: G             L      6.17.0-6-generic #6-Ubuntu
+[ 5407.577837] "echo 0 > /proc/sys/kernel/hung_task_timeout_secs" disables this message.
+[ 5407.578049] task:vdo0:bioQ2      state:D stack:0     pid:3249  tgid:3249  ppid:2      task_flags:0x208040 flags:0x00004000
+[ 5407.578053] Call Trace:
+[ 5407.578054]  <TASK>
+[ 5407.578055]  __schedule+0x2ed/0x7c0
+[ 5407.578059]  schedule+0x27/0x90
+[ 5407.578061]  md_handle_request+0xfe/0x280
+[ 5407.578063]  ? __pfx_autoremove_wake_function+0x10/0x10
+[ 5407.578066]  raid_map+0x36/0x70 [dm_raid]
+[ 5407.578068]  __map_bio+0x1d3/0x200
+[ 5407.578070]  ? alloc_io+0x2b/0x120
+[ 5407.578073]  dm_split_and_process_bio+0x197/0x6f0
+[ 5407.578075]  ? __dequeue_entity+0x408/0x4c0
+[ 5407.578078]  dm_submit_bio+0x4e/0x140
+[ 5407.578081]  __submit_bio+0x19c/0x290
+[ 5407.578083]  __submit_bio_noacct+0x90/0x220
+[ 5407.578085]  ? ktime_get+0x3e/0x100
+[ 5407.578087]  submit_bio_noacct_nocheck+0x203/0x240
+[ 5407.578089]  ? _raw_spin_unlock+0xe/0x40
+[ 5407.578091]  ? bio_associate_blkg_from_css+0xf8/0x360
+[ 5407.578093]  submit_bio_noacct+0x177/0x5e0
+[ 5407.578095]  send_bio_to_device+0x8b/0xe0 [dm_vdo]
+[ 5407.578109]  submit_data_vio+0xbc/0x110 [dm_vdo]
+[ 5407.578122]  service_work_queue+0xb6/0x2c0 [dm_vdo]
+[ 5407.578135]  ? __pfx_autoremove_wake_function+0x10/0x10
+[ 5407.578137]  ? __pfx_work_queue_runner+0x10/0x10 [dm_vdo]
+[ 5407.578150]  work_queue_runner+0x1e/0x30 [dm_vdo]
+[ 5407.578162]  kthread+0x108/0x220
+[ 5407.578164]  ? __pfx_kthread+0x10/0x10
+[ 5407.578166]  ret_from_fork+0x131/0x150
+[ 5407.578169]  ? __pfx_kthread+0x10/0x10
+[ 5407.578170]  ret_from_fork_asm+0x1a/0x30
+[ 5407.578173]  </TASK>
+[ 5407.578174] INFO: task vdo0:bioQ3:3250 blocked for more than 122 seconds.
+[ 5407.578516]       Tainted: G             L      6.17.0-6-generic #6-Ubuntu
+[ 5407.578765] "echo 0 > /proc/sys/kernel/hung_task_timeout_secs" disables this message.
+[ 5407.578998] task:vdo0:bioQ3      state:D stack:0     pid:3250  tgid:3250  ppid:2      task_flags:0x208040 flags:0x00004000
+[ 5407.579001] Call Trace:
+[ 5407.579003]  <TASK>
+[ 5407.579005]  __schedule+0x2ed/0x7c0
+[ 5407.579008]  schedule+0x27/0x90
+[ 5407.579010]  md_handle_request+0xfe/0x280
+[ 5407.579013]  ? __pfx_autoremove_wake_function+0x10/0x10
+[ 5407.579016]  raid_map+0x36/0x70 [dm_raid]
+[ 5407.579018]  __map_bio+0x1d3/0x200
+[ 5407.579021]  ? alloc_io+0x2b/0x120
+[ 5407.579023]  dm_split_and_process_bio+0x197/0x6f0
+[ 5407.579026]  ? wake_up_process+0x15/0x30
+[ 5407.579028]  dm_submit_bio+0x4e/0x140
+[ 5407.579031]  __submit_bio+0x19c/0x290
+[ 5407.579033]  __submit_bio_noacct+0x90/0x220
+[ 5407.579035]  ? ktime_get+0x3e/0x100
+[ 5407.579038]  submit_bio_noacct_nocheck+0x203/0x240
+[ 5407.579039]  ? _raw_spin_unlock+0xe/0x40
+[ 5407.579042]  ? bio_associate_blkg_from_css+0xf8/0x360
+[ 5407.579044]  submit_bio_noacct+0x177/0x5e0
+[ 5407.579046]  send_bio_to_device+0x8b/0xe0 [dm_vdo]
+[ 5407.579060]  submit_data_vio+0xbc/0x110 [dm_vdo]
+[ 5407.579074]  service_work_queue+0xb6/0x2c0 [dm_vdo]
+[ 5407.579087]  ? __pfx_autoremove_wake_function+0x10/0x10
+[ 5407.579089]  ? __pfx_work_queue_runner+0x10/0x10 [dm_vdo]
+[ 5407.579102]  work_queue_runner+0x1e/0x30 [dm_vdo]
+[ 5407.579114]  kthread+0x108/0x220
+[ 5407.579116]  ? __pfx_kthread+0x10/0x10
+[ 5407.579118]  ret_from_fork+0x131/0x150
+[ 5407.579121]  ? __pfx_kthread+0x10/0x10
+[ 5407.579123]  ret_from_fork_asm+0x1a/0x30
+[ 5407.579125]  </TASK>
+[ 5407.579131] INFO: task kworker/1:2:4493 blocked for more than 122 seconds.
+[ 5407.579371]       Tainted: G             L      6.17.0-6-generic #6-Ubuntu
+[ 5407.579650] "echo 0 > /proc/sys/kernel/hung_task_timeout_secs" disables this message.
+[ 5407.579941] task:kworker/1:2     state:D stack:0     pid:4493  tgid:4493  ppid:2      task_flags:0x4208060 flags:0x00004000
+[ 5407.579947] Workqueue: md_misc md_start_sync
+[ 5407.579954] Call Trace:
+[ 5407.579956]  <TASK>
+[ 5407.579958]  __schedule+0x2ed/0x7c0
+[ 5407.579963]  ? psi_group_change+0x195/0x470
+[ 5407.579967]  schedule+0x27/0x90
+[ 5407.579971]  mddev_suspend+0x1de/0x240
+[ 5407.580087]  ? finish_task_switch.isra.0+0x9c/0x310
+[ 5407.580498]  ? __pfx_autoremove_wake_function+0x10/0x10
+[ 5407.580502]  md_start_sync+0x23d/0x2f0
+[ 5407.580506]  process_one_work+0x18b/0x370
+[ 5407.580923]  worker_thread+0x317/0x450
+[ 5407.580932]  ? _raw_spin_unlock_irqrestore+0x11/0x60
+[ 5407.580952]  ? __pfx_worker_thread+0x10/0x10
+[ 5407.580956]  kthread+0x108/0x220
+[ 5407.580962]  ? _raw_spin_unlock_irq+0xe/0x60
+[ 5407.580965]  ? __pfx_kthread+0x10/0x10
+[ 5407.580968]  ret_from_fork+0x131/0x150
+[ 5407.580982]  ? __pfx_kthread+0x10/0x10
+[ 5407.580984]  ret_from_fork_asm+0x1a/0x30
+[ 5407.580995]  </TASK>
+[ 5427.837007] watchdog: BUG: soft lockup - CPU#1 stuck for 183s! [mdX_raid5:3222]
+[ 5427.837010] Modules linked in: dm_vdo dm_bufio lz4_compress dm_raid qrtr cfg80211 binfmt_misc intel_rapl_msr intel_rapl_common intel_uncore_frequency_common intel_pmc_core pmt_telemetry pmt_discovery pmt_class intel_pmc_ssram_telemetry intel_vsec kvm_intel kvm irqbypass rapl snd_hda_codec_generic snd_hda_intel snd_hda_codec snd_hda_core snd_intel_dspcfg snd_intel_sdw_acpi snd_hwdep snd_pcm i2c_i801 snd_timer i2c_smbus i2c_mux snd lpc_ich soundcore joydev input_leds mac_hid sch_fq_codel msr dm_multipath efi_pstore nfnetlink vsock_loopback vmw_vsock_virtio_transport_common vmw_vsock_vmci_transport vsock vmw_vmci dmi_sysfs qemu_fw_cfg ip_tables x_tables autofs4 btrfs blake2b_generic raid10 raid456 async_raid6_recov async_memcpy async_pq async_xor async_tx xor raid6_pq raid1 raid0 linear hid_generic usbhid hid polyval_clmulni ghash_clmulni_intel virtio_rng psmouse ahci virtio_gpu libahci serio_raw virtio_dma_buf aesni_intel
+[ 5427.837040] CPU: 1 UID: 0 PID: 3222 Comm: mdX_raid5 Tainted: G             L      6.17.0-6-generic #6-Ubuntu PREEMPT(voluntary) 
+[ 5427.837042] Tainted: [L]=SOFTLOCKUP
+[ 5427.837042] Hardware name: QEMU Standard PC (Q35 + ICH9, 2009), BIOS 1.16.3-debian-1.16.3-2 04/01/2014
+[ 5427.837043] RIP: 0010:_raw_spin_unlock_irq+0x15/0x60
+[ 5427.837048] Code: cc cc 0f 1f 00 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 0f 1f 44 00 00 55 48 89 e5 e8 a2 00 00 00 90 fb 0f 1f 44 00 00 <65> ff 0d f4 49 b6 01 74 10 5d 31 c0 31 d2 31 c9 31 f6 31 ff c3 cc
+[ 5427.837049] RSP: 0018:ffffd3ab825e3cc8 EFLAGS: 00000246
+[ 5427.837051] RAX: 0000000000000001 RBX: ffffd3ab825e3cf0 RCX: ffff8a8c8f012c80
+[ 5427.837051] RDX: 0000000000000008 RSI: 0000000000000000 RDI: ffff8a8c8f012b04
+[ 5427.837052] RBP: ffffd3ab825e3cc8 R08: 0000000000000000 R09: 0000000000000000
+[ 5427.837052] R10: 0000000000000000 R11: 0000000000000000 R12: 00000000ffffffff
+[ 5427.837053] R13: ffff8a8c8f012800 R14: 0000000000000000 R15: 0000000000000000
+[ 5427.837054] FS:  0000000000000000(0000) GS:ffff8a8d43aff000(0000) knlGS:0000000000000000
+[ 5427.837054] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[ 5427.837055] CR2: 0000000042b1d000 CR3: 000000017e440003 CR4: 0000000000772ef0
+[ 5427.837059] PKRU: 55555554
+[ 5427.837059] Call Trace:
+[ 5427.837060]  <TASK>
+[ 5427.837064]  handle_active_stripes.isra.0+0x1b0/0x2a0 [raid456]
+[ 5427.837069]  ? _raw_spin_unlock_irq+0xe/0x60
+[ 5427.837071]  raid5d+0x40a/0x650 [raid456]
+[ 5427.837075]  md_thread+0x9f/0x1b0
+[ 5427.837078]  ? __pfx_autoremove_wake_function+0x10/0x10
+[ 5427.837081]  ? __pfx_md_thread+0x10/0x10
+[ 5427.837082]  kthread+0x108/0x220
+[ 5427.837083]  ? __pfx_kthread+0x10/0x10
+[ 5427.837084]  ret_from_fork+0x131/0x150
+[ 5427.837087]  ? __pfx_kthread+0x10/0x10
+[ 5427.837087]  ret_from_fork_asm+0x1a/0x30
+[ 5427.837090]  </TASK>
+[ 5455.837380] watchdog: BUG: soft lockup - CPU#1 stuck for 209s! [mdX_raid5:3222]
+[ 5455.837383] Modules linked in: dm_vdo dm_bufio lz4_compress dm_raid qrtr cfg80211 binfmt_misc intel_rapl_msr intel_rapl_common intel_uncore_frequency_common intel_pmc_core pmt_telemetry pmt_discovery pmt_class intel_pmc_ssram_telemetry intel_vsec kvm_intel kvm irqbypass rapl snd_hda_codec_generic snd_hda_intel snd_hda_codec snd_hda_core snd_intel_dspcfg snd_intel_sdw_acpi snd_hwdep snd_pcm i2c_i801 snd_timer i2c_smbus i2c_mux snd lpc_ich soundcore joydev input_leds mac_hid sch_fq_codel msr dm_multipath efi_pstore nfnetlink vsock_loopback vmw_vsock_virtio_transport_common vmw_vsock_vmci_transport vsock vmw_vmci dmi_sysfs qemu_fw_cfg ip_tables x_tables autofs4 btrfs blake2b_generic raid10 raid456 async_raid6_recov async_memcpy async_pq async_xor async_tx xor raid6_pq raid1 raid0 linear hid_generic usbhid hid polyval_clmulni ghash_clmulni_intel virtio_rng psmouse ahci virtio_gpu libahci serio_raw virtio_dma_buf aesni_intel
+[ 5455.837409] CPU: 1 UID: 0 PID: 3222 Comm: mdX_raid5 Tainted: G             L      6.17.0-6-generic #6-Ubuntu PREEMPT(voluntary) 
+[ 5455.837411] Tainted: [L]=SOFTLOCKUP
+[ 5455.837411] Hardware name: QEMU Standard PC (Q35 + ICH9, 2009), BIOS 1.16.3-debian-1.16.3-2 04/01/2014
+[ 5455.837412] RIP: 0010:raid5_release_stripe+0x8e/0x150 [raid456]
+[ 5455.837420] Code: 41 5e 5d 31 c0 31 d2 31 c9 31 f6 31 ff 45 31 c0 c3 cc cc cc cc 49 8b 40 28 48 83 b8 80 01 00 00 00 74 40 f0 48 0f ba 69 48 12 <72> 37 49 8b 80 a0 02 00 00 48 8d 71 20 49 8d 90 a0 02 00 00 48 89
+[ 5455.837421] RSP: 0018:ffffd3ab825e3d20 EFLAGS: 00000282
+[ 5455.837422] RAX: ffff8a8c8d03f058 RBX: ffff8a8c81ad9ae0 RCX: ffff8a8c81ad9ae0
+[ 5455.837423] RDX: 0000000000000000 RSI: 0000000000000000 RDI: ffff8a8c81ad9ae0
+[ 5455.837423] RBP: ffffd3ab825e3d60 R08: ffff8a8c8f012800 R09: 0000000000000000
+[ 5455.837424] R10: 0000000000000000 R11: 0000000000000000 R12: 0000000000000000
+[ 5455.837424] R13: ffff8a8cf6e9b928 R14: 0000000000000002 R15: 00000000008d7c28
+[ 5455.837425] FS:  0000000000000000(0000) GS:ffff8a8d43aff000(0000) knlGS:0000000000000000
+[ 5455.837426] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[ 5455.837426] CR2: 0000000042b1d000 CR3: 000000017e440003 CR4: 0000000000772ef0
+[ 5455.837429] PKRU: 55555554
+[ 5455.837430] Call Trace:
+[ 5455.837431]  <TASK>
+[ 5455.837433]  raid5d+0x330/0x650 [raid456]
+[ 5455.837438]  md_thread+0x9f/0x1b0
+[ 5455.837441]  ? __pfx_autoremove_wake_function+0x10/0x10
+[ 5455.837444]  ? __pfx_md_thread+0x10/0x10
+[ 5455.837445]  kthread+0x108/0x220
+[ 5455.837446]  ? __pfx_kthread+0x10/0x10
+[ 5455.837447]  ret_from_fork+0x131/0x150
+[ 5455.837450]  ? __pfx_kthread+0x10/0x10
+[ 5455.837450]  ret_from_fork_asm+0x1a/0x30
+[ 5455.837453]  </TASK>
+[ 5483.837756] watchdog: BUG: soft lockup - CPU#1 stuck for 235s! [mdX_raid5:3222]
+[ 5483.837759] Modules linked in: dm_vdo dm_bufio lz4_compress dm_raid qrtr cfg80211 binfmt_misc intel_rapl_msr intel_rapl_common intel_uncore_frequency_common intel_pmc_core pmt_telemetry pmt_discovery pmt_class intel_pmc_ssram_telemetry intel_vsec kvm_intel kvm irqbypass rapl snd_hda_codec_generic snd_hda_intel snd_hda_codec snd_hda_core snd_intel_dspcfg snd_intel_sdw_acpi snd_hwdep snd_pcm i2c_i801 snd_timer i2c_smbus i2c_mux snd lpc_ich soundcore joydev input_leds mac_hid sch_fq_codel msr dm_multipath efi_pstore nfnetlink vsock_loopback vmw_vsock_virtio_transport_common vmw_vsock_vmci_transport vsock vmw_vmci dmi_sysfs qemu_fw_cfg ip_tables x_tables autofs4 btrfs blake2b_generic raid10 raid456 async_raid6_recov async_memcpy async_pq async_xor async_tx xor raid6_pq raid1 raid0 linear hid_generic usbhid hid polyval_clmulni ghash_clmulni_intel virtio_rng psmouse ahci virtio_gpu libahci serio_raw virtio_dma_buf aesni_intel
+[ 5483.837792] CPU: 1 UID: 0 PID: 3222 Comm: mdX_raid5 Tainted: G             L      6.17.0-6-generic #6-Ubuntu PREEMPT(voluntary) 
+[ 5483.837794] Tainted: [L]=SOFTLOCKUP
+[ 5483.837794] Hardware name: QEMU Standard PC (Q35 + ICH9, 2009), BIOS 1.16.3-debian-1.16.3-2 04/01/2014
+[ 5483.837795] RIP: 0010:_raw_spin_unlock_irq+0x15/0x60
+[ 5483.837801] Code: cc cc 0f 1f 00 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 0f 1f 44 00 00 55 48 89 e5 e8 a2 00 00 00 90 fb 0f 1f 44 00 00 <65> ff 0d f4 49 b6 01 74 10 5d 31 c0 31 d2 31 c9 31 f6 31 ff c3 cc
+[ 5483.837802] RSP: 0018:ffffd3ab825e3ce0 EFLAGS: 00000246
+[ 5483.837803] RAX: 0000000000000001 RBX: ffff8a8c8f012800 RCX: 0000000000000000
+[ 5483.837804] RDX: ffff8a8c81ad9ae0 RSI: 0000000000000000 RDI: ffff8a8c8f01281c
+[ 5483.837804] RBP: ffffd3ab825e3ce0 R08: 0000000000000000 R09: 0000000000000000
+[ 5483.837804] R10: 0000000000000000 R11: 0000000000000000 R12: 0000000000000005
+[ 5483.837805] R13: ffff8a8c8f01281c R14: 0000000000000000 R15: 0000000000000000
+[ 5483.837805] FS:  0000000000000000(0000) GS:ffff8a8d43aff000(0000) knlGS:0000000000000000
+[ 5483.837806] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[ 5483.837807] CR2: 0000000042b1d000 CR3: 000000017e440003 CR4: 0000000000772ef0
+[ 5483.837809] PKRU: 55555554
+[ 5483.837810] Call Trace:
+[ 5483.837811]  <TASK>
+[ 5483.837814]  raid5_get_active_stripe+0x163/0x310 [raid456]
+[ 5483.837820]  ? do_release_stripe+0x211/0x3c0 [raid456]
+[ 5483.837823]  raid5d+0x2d0/0x650 [raid456]
+[ 5483.837827]  md_thread+0x9f/0x1b0
+[ 5483.837829]  ? __pfx_autoremove_wake_function+0x10/0x10
+[ 5483.837832]  ? __pfx_md_thread+0x10/0x10
+[ 5483.837833]  kthread+0x108/0x220
+[ 5483.837835]  ? __pfx_kthread+0x10/0x10
+[ 5483.837836]  ret_from_fork+0x131/0x150
+[ 5483.837838]  ? __pfx_kthread+0x10/0x10
+[ 5483.837839]  ret_from_fork_asm+0x1a/0x30
+[ 5483.837841]  </TASK>
+[ 5511.838130] watchdog: BUG: soft lockup - CPU#1 stuck for 261s! [mdX_raid5:3222]
+[ 5511.838133] Modules linked in: dm_vdo dm_bufio lz4_compress dm_raid qrtr cfg80211 binfmt_misc intel_rapl_msr intel_rapl_common intel_uncore_frequency_common intel_pmc_core pmt_telemetry pmt_discovery pmt_class intel_pmc_ssram_telemetry intel_vsec kvm_intel kvm irqbypass rapl snd_hda_codec_generic snd_hda_intel snd_hda_codec snd_hda_core snd_intel_dspcfg snd_intel_sdw_acpi snd_hwdep snd_pcm i2c_i801 snd_timer i2c_smbus i2c_mux snd lpc_ich soundcore joydev input_leds mac_hid sch_fq_codel msr dm_multipath efi_pstore nfnetlink vsock_loopback vmw_vsock_virtio_transport_common vmw_vsock_vmci_transport vsock vmw_vmci dmi_sysfs qemu_fw_cfg ip_tables x_tables autofs4 btrfs blake2b_generic raid10 raid456 async_raid6_recov async_memcpy async_pq async_xor async_tx xor raid6_pq raid1 raid0 linear hid_generic usbhid hid polyval_clmulni ghash_clmulni_intel virtio_rng psmouse ahci virtio_gpu libahci serio_raw virtio_dma_buf aesni_intel
+[ 5511.838168] CPU: 1 UID: 0 PID: 3222 Comm: mdX_raid5 Tainted: G             L      6.17.0-6-generic #6-Ubuntu PREEMPT(voluntary) 
+[ 5511.838170] Tainted: [L]=SOFTLOCKUP
+[ 5511.838171] Hardware name: QEMU Standard PC (Q35 + ICH9, 2009), BIOS 1.16.3-debian-1.16.3-2 04/01/2014
+[ 5511.838172] RIP: 0010:_raw_spin_unlock_irq+0x15/0x60
+[ 5511.838178] Code: cc cc 0f 1f 00 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 0f 1f 44 00 00 55 48 89 e5 e8 a2 00 00 00 90 fb 0f 1f 44 00 00 <65> ff 0d f4 49 b6 01 74 10 5d 31 c0 31 d2 31 c9 31 f6 31 ff c3 cc
+[ 5511.838179] RSP: 0018:ffffd3ab825e3cc8 EFLAGS: 00000246
+[ 5511.838181] RAX: 0000000000000001 RBX: ffffd3ab825e3cf0 RCX: ffff8a8c8f012c80
+[ 5511.838181] RDX: 0000000000000008 RSI: 0000000000000000 RDI: ffff8a8c8f012b04
+[ 5511.838182] RBP: ffffd3ab825e3cc8 R08: 0000000000000000 R09: 0000000000000000
+[ 5511.838182] R10: 0000000000000000 R11: 0000000000000000 R12: 00000000ffffffff
+[ 5511.838183] R13: ffff8a8c8f012800 R14: 0000000000000000 R15: 0000000000000000
+[ 5511.838184] FS:  0000000000000000(0000) GS:ffff8a8d43aff000(0000) knlGS:0000000000000000
+[ 5511.838185] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[ 5511.838185] CR2: 0000000042b1d000 CR3: 000000017e440003 CR4: 0000000000772ef0
+[ 5511.838189] PKRU: 55555554
+[ 5511.838189] Call Trace:
+[ 5511.838190]  <TASK>
+[ 5511.838194]  handle_active_stripes.isra.0+0x1b0/0x2a0 [raid456]
+[ 5511.838200]  ? _raw_spin_unlock_irq+0xe/0x60
+[ 5511.838203]  raid5d+0x40a/0x650 [raid456]
+[ 5511.838207]  md_thread+0x9f/0x1b0
+[ 5511.838210]  ? __pfx_autoremove_wake_function+0x10/0x10
+[ 5511.838213]  ? __pfx_md_thread+0x10/0x10
+[ 5511.838214]  kthread+0x108/0x220
+[ 5511.838216]  ? __pfx_kthread+0x10/0x10
+[ 5511.838217]  ret_from_fork+0x131/0x150
+[ 5511.838220]  ? __pfx_kthread+0x10/0x10
+[ 5511.838221]  ret_from_fork_asm+0x1a/0x30
+[ 5511.838224]  </TASK>
+[ 5530.428280] INFO: task vdo0:bioQ0:3247 blocked for more than 245 seconds.
+[ 5530.428564]       Tainted: G             L      6.17.0-6-generic #6-Ubuntu
+[ 5530.428787] "echo 0 > /proc/sys/kernel/hung_task_timeout_secs" disables this message.
+[ 5530.429013] task:vdo0:bioQ0      state:D stack:0     pid:3247  tgid:3247  ppid:2      task_flags:0x208040 flags:0x00004000
+[ 5530.429018] Call Trace:
+[ 5530.429020]  <TASK>
+[ 5530.429023]  __schedule+0x2ed/0x7c0
+[ 5530.429030]  ? __pfx_bit_wait+0x10/0x10
+[ 5530.429033]  schedule+0x27/0x90
+[ 5530.429035]  bit_wait+0x11/0x80
+[ 5530.429037]  __wait_on_bit+0x2d/0xa0
+[ 5530.429039]  ? _raw_spin_unlock_irq+0xe/0x60
+[ 5530.429042]  out_of_line_wait_on_bit+0x8e/0xc0
+[ 5530.429044]  ? __pfx_wake_bit_function+0x10/0x10
+[ 5530.429050]  make_stripe_request+0x496/0x520 [raid456]
+[ 5530.429059]  raid5_make_request+0x18c/0x4d0 [raid456]
+[ 5530.429064]  ? __pfx_woken_wake_function+0x10/0x10
+[ 5530.429068]  md_handle_request+0x153/0x280
+[ 5530.429074]  raid_map+0x36/0x70 [dm_raid]
+[ 5530.429076]  __map_bio+0x1d3/0x200
+[ 5530.429079]  ? alloc_io+0x2b/0x120
+[ 5530.429081]  dm_split_and_process_bio+0x197/0x6f0
+[ 5530.429084]  ? wake_up_process+0x15/0x30
+[ 5530.429087]  dm_submit_bio+0x4e/0x140
+[ 5530.429090]  __submit_bio+0x19c/0x290
+[ 5530.429093]  __submit_bio_noacct+0x90/0x220
+[ 5530.429095]  ? ktime_get+0x3e/0x100
+[ 5530.429098]  submit_bio_noacct_nocheck+0x203/0x240
+[ 5530.429100]  ? _raw_spin_unlock+0xe/0x40
+[ 5530.429102]  ? bio_associate_blkg_from_css+0xf8/0x360
+[ 5530.429105]  submit_bio_noacct+0x177/0x5e0
+[ 5530.429107]  send_bio_to_device+0x8b/0xe0 [dm_vdo]
+[ 5530.429132]  submit_data_vio+0xbc/0x110 [dm_vdo]
+[ 5530.429147]  service_work_queue+0xb6/0x2c0 [dm_vdo]
+[ 5530.429163]  ? __pfx_autoremove_wake_function+0x10/0x10
+[ 5530.429165]  ? __pfx_work_queue_runner+0x10/0x10 [dm_vdo]
+[ 5530.429179]  work_queue_runner+0x1e/0x30 [dm_vdo]
+[ 5530.429225]  kthread+0x108/0x220
+[ 5530.429228]  ? __pfx_kthread+0x10/0x10
+[ 5530.429230]  ret_from_fork+0x131/0x150
+[ 5530.429234]  ? __pfx_kthread+0x10/0x10
+[ 5530.429235]  ret_from_fork_asm+0x1a/0x30
+[ 5530.429239]  </TASK>
+[ 5530.429240] INFO: task vdo0:bioQ1:3248 blocked for more than 245 seconds.
+[ 5530.429475]       Tainted: G             L      6.17.0-6-generic #6-Ubuntu
+[ 5530.429701] "echo 0 > /proc/sys/kernel/hung_task_timeout_secs" disables this message.
+[ 5530.429925] task:vdo0:bioQ1      state:D stack:0     pid:3248  tgid:3248  ppid:2      task_flags:0x208040 flags:0x00004000
+[ 5530.429929] Call Trace:
+[ 5530.429930]  <TASK>
+[ 5530.429932]  __schedule+0x2ed/0x7c0
+[ 5530.429935]  schedule+0x27/0x90
+[ 5530.429937]  md_handle_request+0xfe/0x280
+[ 5530.429940]  ? __pfx_autoremove_wake_function+0x10/0x10
+[ 5530.429942]  raid_map+0x36/0x70 [dm_raid]
+[ 5530.429945]  __map_bio+0x1d3/0x200
+[ 5530.429947]  ? alloc_io+0x2b/0x120
+[ 5530.429949]  dm_split_and_process_bio+0x197/0x6f0
+[ 5530.429952]  ? wake_up_process+0x15/0x30
+[ 5530.429954]  dm_submit_bio+0x4e/0x140
+[ 5530.429957]  __submit_bio+0x19c/0x290
+[ 5530.429959]  __submit_bio_noacct+0x90/0x220
+[ 5530.429961]  ? ktime_get+0x3e/0x100
+[ 5530.429963]  submit_bio_noacct_nocheck+0x203/0x240
+[ 5530.429965]  ? _raw_spin_unlock+0xe/0x40
+[ 5530.429967]  ? bio_associate_blkg_from_css+0xf8/0x360
+[ 5530.429969]  submit_bio_noacct+0x177/0x5e0
+[ 5530.429971]  send_bio_to_device+0x8b/0xe0 [dm_vdo]
+[ 5530.429986]  submit_data_vio+0xbc/0x110 [dm_vdo]
+[ 5530.429999]  service_work_queue+0xb6/0x2c0 [dm_vdo]
+[ 5530.430012]  ? __pfx_autoremove_wake_function+0x10/0x10
+[ 5530.430014]  ? __pfx_work_queue_runner+0x10/0x10 [dm_vdo]
+[ 5530.430027]  work_queue_runner+0x1e/0x30 [dm_vdo]
+[ 5530.430039]  kthread+0x108/0x220
+[ 5530.430041]  ? __pfx_kthread+0x10/0x10
+[ 5530.430043]  ret_from_fork+0x131/0x150
+[ 5530.430046]  ? __pfx_kthread+0x10/0x10
+[ 5530.430048]  ret_from_fork_asm+0x1a/0x30
+[ 5530.430050]  </TASK>
+[ 5530.430051] INFO: task vdo0:bioQ2:3249 blocked for more than 245 seconds.
+[ 5530.430286]       Tainted: G             L      6.17.0-6-generic #6-Ubuntu
+[ 5530.430520] "echo 0 > /proc/sys/kernel/hung_task_timeout_secs" disables this message.
+[ 5530.430748] task:vdo0:bioQ2      state:D stack:0     pid:3249  tgid:3249  ppid:2      task_flags:0x208040 flags:0x00004000
+[ 5530.430751] Call Trace:
+[ 5530.430753]  <TASK>
+[ 5530.430754]  __schedule+0x2ed/0x7c0
+[ 5530.430757]  schedule+0x27/0x90
+[ 5530.430759]  md_handle_request+0xfe/0x280
+[ 5530.430762]  ? __pfx_autoremove_wake_function+0x10/0x10
+[ 5530.430764]  raid_map+0x36/0x70 [dm_raid]
+[ 5530.430766]  __map_bio+0x1d3/0x200
+[ 5530.430769]  ? alloc_io+0x2b/0x120
+[ 5530.430771]  dm_split_and_process_bio+0x197/0x6f0
+[ 5530.430773]  ? __dequeue_entity+0x408/0x4c0
+[ 5530.430776]  dm_submit_bio+0x4e/0x140
+[ 5530.430779]  __submit_bio+0x19c/0x290
+[ 5530.430781]  __submit_bio_noacct+0x90/0x220
+[ 5530.430783]  ? ktime_get+0x3e/0x100
+[ 5530.430785]  submit_bio_noacct_nocheck+0x203/0x240
+[ 5530.430787]  ? _raw_spin_unlock+0xe/0x40
+[ 5530.430789]  ? bio_associate_blkg_from_css+0xf8/0x360
+[ 5530.430791]  submit_bio_noacct+0x177/0x5e0
+[ 5530.430793]  send_bio_to_device+0x8b/0xe0 [dm_vdo]
+[ 5530.430807]  submit_data_vio+0xbc/0x110 [dm_vdo]
+[ 5530.430820]  service_work_queue+0xb6/0x2c0 [dm_vdo]
+[ 5530.430833]  ? __pfx_autoremove_wake_function+0x10/0x10
+[ 5530.430835]  ? __pfx_work_queue_runner+0x10/0x10 [dm_vdo]
+[ 5530.430847]  work_queue_runner+0x1e/0x30 [dm_vdo]
+[ 5530.430860]  kthread+0x108/0x220
+[ 5530.430862]  ? __pfx_kthread+0x10/0x10
+[ 5530.430863]  ret_from_fork+0x131/0x150
+[ 5530.430866]  ? __pfx_kthread+0x10/0x10
+[ 5530.430868]  ret_from_fork_asm+0x1a/0x30
+[ 5530.430871]  </TASK>
+[ 5530.430872] INFO: task vdo0:bioQ3:3250 blocked for more than 245 seconds.
+[ 5530.431096]       Tainted: G             L      6.17.0-6-generic #6-Ubuntu
+[ 5530.431330] "echo 0 > /proc/sys/kernel/hung_task_timeout_secs" disables this message.
+[ 5530.432440] task:vdo0:bioQ3      state:D stack:0     pid:3250  tgid:3250  ppid:2      task_flags:0x208040 flags:0x00004000
+[ 5530.432444] Call Trace:
+[ 5530.432445]  <TASK>
+[ 5530.432447]  __schedule+0x2ed/0x7c0
+[ 5530.432451]  schedule+0x27/0x90
+[ 5530.432453]  md_handle_request+0xfe/0x280
+[ 5530.432455]  ? __pfx_autoremove_wake_function+0x10/0x10
+[ 5530.432458]  raid_map+0x36/0x70 [dm_raid]
+[ 5530.432460]  __map_bio+0x1d3/0x200
+[ 5530.432463]  ? alloc_io+0x2b/0x120
+[ 5530.432465]  dm_split_and_process_bio+0x197/0x6f0
+[ 5530.432468]  ? wake_up_process+0x15/0x30
+[ 5530.432470]  dm_submit_bio+0x4e/0x140
+[ 5530.432472]  __submit_bio+0x19c/0x290
+[ 5530.432475]  __submit_bio_noacct+0x90/0x220
+[ 5530.432477]  ? ktime_get+0x3e/0x100
+[ 5530.432479]  submit_bio_noacct_nocheck+0x203/0x240
+[ 5530.432481]  ? _raw_spin_unlock+0xe/0x40
+[ 5530.432483]  ? bio_associate_blkg_from_css+0xf8/0x360
+[ 5530.432485]  submit_bio_noacct+0x177/0x5e0
+[ 5530.432487]  send_bio_to_device+0x8b/0xe0 [dm_vdo]
+[ 5530.432501]  submit_data_vio+0xbc/0x110 [dm_vdo]
+[ 5530.432514]  service_work_queue+0xb6/0x2c0 [dm_vdo]
+[ 5530.432527]  ? __pfx_autoremove_wake_function+0x10/0x10
+[ 5530.432529]  ? __pfx_work_queue_runner+0x10/0x10 [dm_vdo]
+[ 5530.432541]  work_queue_runner+0x1e/0x30 [dm_vdo]
+[ 5530.432554]  kthread+0x108/0x220
+[ 5530.432556]  ? __pfx_kthread+0x10/0x10
+[ 5530.432557]  ret_from_fork+0x131/0x150
+[ 5530.432560]  ? __pfx_kthread+0x10/0x10
+[ 5530.432562]  ret_from_fork_asm+0x1a/0x30
+[ 5530.432565]  </TASK>
+[ 5530.432570] INFO: task kworker/1:2:4493 blocked for more than 245 seconds.
+[ 5530.432795]       Tainted: G             L      6.17.0-6-generic #6-Ubuntu
+[ 5530.433023] "echo 0 > /proc/sys/kernel/hung_task_timeout_secs" disables this message.
+[ 5530.433260] task:kworker/1:2     state:D stack:0     pid:4493  tgid:4493  ppid:2      task_flags:0x4208060 flags:0x00004000
+[ 5530.433265] Workqueue: md_misc md_start_sync
+[ 5530.433268] Call Trace:
+[ 5530.433269]  <TASK>
+[ 5530.433270]  __schedule+0x2ed/0x7c0
+[ 5530.433273]  ? psi_group_change+0x195/0x470
+[ 5530.433275]  schedule+0x27/0x90
+[ 5530.433277]  mddev_suspend+0x1de/0x240
+[ 5530.433281]  ? finish_task_switch.isra.0+0x9c/0x310
+[ 5530.433284]  ? __pfx_autoremove_wake_function+0x10/0x10
+[ 5530.433286]  md_start_sync+0x23d/0x2f0
+[ 5530.433288]  process_one_work+0x18b/0x370
+[ 5530.433291]  worker_thread+0x317/0x450
+[ 5530.433293]  ? _raw_spin_unlock_irqrestore+0x11/0x60
+[ 5530.433296]  ? __pfx_worker_thread+0x10/0x10
+[ 5530.433298]  kthread+0x108/0x220
+[ 5530.433300]  ? _raw_spin_unlock_irq+0xe/0x60
+[ 5530.433302]  ? __pfx_kthread+0x10/0x10
+[ 5530.433304]  ret_from_fork+0x131/0x150
+[ 5530.433306]  ? __pfx_kthread+0x10/0x10
+[ 5530.433308]  ret_from_fork_asm+0x1a/0x30
+[ 5530.433311]  </TASK>
+[ 5530.433311] Future hung task reports are suppressed, see sysctl kernel.hung_task_warnings
+[ 5539.838505] watchdog: BUG: soft lockup - CPU#1 stuck for 287s! [mdX_raid5:3222]
+[ 5539.838509] Modules linked in: dm_vdo dm_bufio lz4_compress dm_raid qrtr cfg80211 binfmt_misc intel_rapl_msr intel_rapl_common intel_uncore_frequency_common intel_pmc_core pmt_telemetry pmt_discovery pmt_class intel_pmc_ssram_telemetry intel_vsec kvm_intel kvm irqbypass rapl snd_hda_codec_generic snd_hda_intel snd_hda_codec snd_hda_core snd_intel_dspcfg snd_intel_sdw_acpi snd_hwdep snd_pcm i2c_i801 snd_timer i2c_smbus i2c_mux snd lpc_ich soundcore joydev input_leds mac_hid sch_fq_codel msr dm_multipath efi_pstore nfnetlink vsock_loopback vmw_vsock_virtio_transport_common vmw_vsock_vmci_transport vsock vmw_vmci dmi_sysfs qemu_fw_cfg ip_tables x_tables autofs4 btrfs blake2b_generic raid10 raid456 async_raid6_recov async_memcpy async_pq async_xor async_tx xor raid6_pq raid1 raid0 linear hid_generic usbhid hid polyval_clmulni ghash_clmulni_intel virtio_rng psmouse ahci virtio_gpu libahci serio_raw virtio_dma_buf aesni_intel
+[ 5539.838539] CPU: 1 UID: 0 PID: 3222 Comm: mdX_raid5 Tainted: G             L      6.17.0-6-generic #6-Ubuntu PREEMPT(voluntary) 
+[ 5539.838541] Tainted: [L]=SOFTLOCKUP
+[ 5539.838542] Hardware name: QEMU Standard PC (Q35 + ICH9, 2009), BIOS 1.16.3-debian-1.16.3-2 04/01/2014
+[ 5539.838546] RIP: 0010:_raw_spin_unlock_irq+0x15/0x60
+[ 5539.838551] Code: cc cc 0f 1f 00 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 0f 1f 44 00 00 55 48 89 e5 e8 a2 00 00 00 90 fb 0f 1f 44 00 00 <65> ff 0d f4 49 b6 01 74 10 5d 31 c0 31 d2 31 c9 31 f6 31 ff c3 cc
+[ 5539.838552] RSP: 0018:ffffd3ab825e3d60 EFLAGS: 00000246
+[ 5539.838553] RAX: 0000000000000001 RBX: ffff8a8c8f012c10 RCX: 0000000000000000
+[ 5539.838554] RDX: 0000000000000000 RSI: 0000000000000000 RDI: ffff8a8c8f012b04
+[ 5539.838554] RBP: ffffd3ab825e3d60 R08: 0000000000000000 R09: 0000000000000000
+[ 5539.838555] R10: 0000000000000000 R11: 0000000000000000 R12: 0000000000000000
+[ 5539.838555] R13: ffff8a8cf6e9b928 R14: ffff8a8c8f012800 R15: ffff8a8c8f0128c8
+[ 5539.838556] FS:  0000000000000000(0000) GS:ffff8a8d43aff000(0000) knlGS:0000000000000000
+[ 5539.838557] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[ 5539.838557] CR2: 0000000042b1d000 CR3: 000000017e440003 CR4: 0000000000772ef0
+[ 5539.838560] PKRU: 55555554
+[ 5539.838561] Call Trace:
+[ 5539.838562]  <TASK>
+[ 5539.838565]  raid5d+0x1fd/0x650 [raid456]
+[ 5539.838572]  md_thread+0x9f/0x1b0
+[ 5539.838575]  ? __pfx_autoremove_wake_function+0x10/0x10
+[ 5539.838578]  ? __pfx_md_thread+0x10/0x10
+[ 5539.838579]  kthread+0x108/0x220
+[ 5539.838581]  ? __pfx_kthread+0x10/0x10
+[ 5539.838581]  ret_from_fork+0x131/0x150
+[ 5539.838584]  ? __pfx_kthread+0x10/0x10
+[ 5539.838585]  ret_from_fork_asm+0x1a/0x30
+[ 5539.838587]  </TASK>
+[ 5567.838879] watchdog: BUG: soft lockup - CPU#1 stuck for 313s! [mdX_raid5:3222]
+[ 5567.838883] Modules linked in: dm_vdo dm_bufio lz4_compress dm_raid qrtr cfg80211 binfmt_misc intel_rapl_msr intel_rapl_common intel_uncore_frequency_common intel_pmc_core pmt_telemetry pmt_discovery pmt_class intel_pmc_ssram_telemetry intel_vsec kvm_intel kvm irqbypass rapl snd_hda_codec_generic snd_hda_intel snd_hda_codec snd_hda_core snd_intel_dspcfg snd_intel_sdw_acpi snd_hwdep snd_pcm i2c_i801 snd_timer i2c_smbus i2c_mux snd lpc_ich soundcore joydev input_leds mac_hid sch_fq_codel msr dm_multipath efi_pstore nfnetlink vsock_loopback vmw_vsock_virtio_transport_common vmw_vsock_vmci_transport vsock vmw_vmci dmi_sysfs qemu_fw_cfg ip_tables x_tables autofs4 btrfs blake2b_generic raid10 raid456 async_raid6_recov async_memcpy async_pq async_xor async_tx xor raid6_pq raid1 raid0 linear hid_generic usbhid hid polyval_clmulni ghash_clmulni_intel virtio_rng psmouse ahci virtio_gpu libahci serio_raw virtio_dma_buf aesni_intel
+[ 5567.838915] CPU: 1 UID: 0 PID: 3222 Comm: mdX_raid5 Tainted: G             L      6.17.0-6-generic #6-Ubuntu PREEMPT(voluntary) 
+[ 5567.838917] Tainted: [L]=SOFTLOCKUP
+[ 5567.838917] Hardware name: QEMU Standard PC (Q35 + ICH9, 2009), BIOS 1.16.3-debian-1.16.3-2 04/01/2014
+[ 5567.838918] RIP: 0010:_raw_spin_unlock_irq+0x15/0x60
+[ 5567.838924] Code: cc cc 0f 1f 00 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 0f 1f 44 00 00 55 48 89 e5 e8 a2 00 00 00 90 fb 0f 1f 44 00 00 <65> ff 0d f4 49 b6 01 74 10 5d 31 c0 31 d2 31 c9 31 f6 31 ff c3 cc
+[ 5567.838925] RSP: 0018:ffffd3ab825e3d60 EFLAGS: 00000246
+[ 5567.838927] RAX: 0000000000000001 RBX: ffff8a8c8f012c10 RCX: 0000000000000000
+[ 5567.838927] RDX: 0000000000000000 RSI: 0000000000000000 RDI: ffff8a8c8f012b04
+[ 5567.838928] RBP: ffffd3ab825e3d60 R08: 0000000000000000 R09: 0000000000000000
+[ 5567.838928] R10: 0000000000000000 R11: 0000000000000000 R12: 0000000000000000
+[ 5567.838929] R13: ffff8a8cf6e9b928 R14: ffff8a8c8f012800 R15: ffff8a8c8f0128c8
+[ 5567.838930] FS:  0000000000000000(0000) GS:ffff8a8d43aff000(0000) knlGS:0000000000000000
+[ 5567.838930] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[ 5567.838931] CR2: 0000000042b1d000 CR3: 000000017e440003 CR4: 0000000000772ef0
+[ 5567.838934] PKRU: 55555554
+[ 5567.838934] Call Trace:
+[ 5567.838936]  <TASK>
+[ 5567.838939]  raid5d+0x1fd/0x650 [raid456]
+[ 5567.838947]  md_thread+0x9f/0x1b0
+[ 5567.838950]  ? __pfx_autoremove_wake_function+0x10/0x10
+[ 5567.838952]  ? __pfx_md_thread+0x10/0x10
+[ 5567.838954]  kthread+0x108/0x220
+[ 5567.838955]  ? __pfx_kthread+0x10/0x10
+[ 5567.838956]  ret_from_fork+0x131/0x150
+[ 5567.838959]  ? __pfx_kthread+0x10/0x10
+[ 5567.838960]  ret_from_fork_asm+0x1a/0x30
+[ 5567.838962]  </TASK>
+[ 5595.839255] watchdog: BUG: soft lockup - CPU#1 stuck for 339s! [mdX_raid5:3222]
+[ 5595.839258] Modules linked in: dm_vdo dm_bufio lz4_compress dm_raid qrtr cfg80211 binfmt_misc intel_rapl_msr intel_rapl_common intel_uncore_frequency_common intel_pmc_core pmt_telemetry pmt_discovery pmt_class intel_pmc_ssram_telemetry intel_vsec kvm_intel kvm irqbypass rapl snd_hda_codec_generic snd_hda_intel snd_hda_codec snd_hda_core snd_intel_dspcfg snd_intel_sdw_acpi snd_hwdep snd_pcm i2c_i801 snd_timer i2c_smbus i2c_mux snd lpc_ich soundcore joydev input_leds mac_hid sch_fq_codel msr dm_multipath efi_pstore nfnetlink vsock_loopback vmw_vsock_virtio_transport_common vmw_vsock_vmci_transport vsock vmw_vmci dmi_sysfs qemu_fw_cfg ip_tables x_tables autofs4 btrfs blake2b_generic raid10 raid456 async_raid6_recov async_memcpy async_pq async_xor async_tx xor raid6_pq raid1 raid0 linear hid_generic usbhid hid polyval_clmulni ghash_clmulni_intel virtio_rng psmouse ahci virtio_gpu libahci serio_raw virtio_dma_buf aesni_intel
+[ 5595.839286] CPU: 1 UID: 0 PID: 3222 Comm: mdX_raid5 Tainted: G             L      6.17.0-6-generic #6-Ubuntu PREEMPT(voluntary) 
+[ 5595.839288] Tainted: [L]=SOFTLOCKUP
+[ 5595.839288] Hardware name: QEMU Standard PC (Q35 + ICH9, 2009), BIOS 1.16.3-debian-1.16.3-2 04/01/2014
+[ 5595.839289] RIP: 0010:_raw_spin_unlock_irq+0x15/0x60
+[ 5595.839294] Code: cc cc 0f 1f 00 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 0f 1f 44 00 00 55 48 89 e5 e8 a2 00 00 00 90 fb 0f 1f 44 00 00 <65> ff 0d f4 49 b6 01 74 10 5d 31 c0 31 d2 31 c9 31 f6 31 ff c3 cc
+[ 5595.839294] RSP: 0018:ffffd3ab825e3ce0 EFLAGS: 00000246
+[ 5595.839296] RAX: 0000000000000001 RBX: ffff8a8c8f012800 RCX: 0000000000000000
+[ 5595.839296] RDX: ffff8a8c81ad9ae0 RSI: 0000000000000000 RDI: ffff8a8c8f01281c
+[ 5595.839297] RBP: ffffd3ab825e3ce0 R08: 0000000000000000 R09: 0000000000000000
+[ 5595.839297] R10: 0000000000000000 R11: 0000000000000000 R12: 0000000000000005
+[ 5595.839298] R13: ffff8a8c8f01281c R14: 0000000000000000 R15: 0000000000000000
+[ 5595.839299] FS:  0000000000000000(0000) GS:ffff8a8d43aff000(0000) knlGS:0000000000000000
+[ 5595.839299] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[ 5595.839300] CR2: 0000000042b1d000 CR3: 000000017e440003 CR4: 0000000000772ef0
+[ 5595.839303] PKRU: 55555554
+[ 5595.839303] Call Trace:
+[ 5595.839304]  <TASK>
+[ 5595.839307]  raid5_get_active_stripe+0x163/0x310 [raid456]
+[ 5595.839313]  ? do_release_stripe+0x211/0x3c0 [raid456]
+[ 5595.839316]  raid5d+0x2d0/0x650 [raid456]
+[ 5595.839320]  md_thread+0x9f/0x1b0
+[ 5595.839323]  ? __pfx_autoremove_wake_function+0x10/0x10
+[ 5595.839325]  ? __pfx_md_thread+0x10/0x10
+[ 5595.839326]  kthread+0x108/0x220
+[ 5595.839328]  ? __pfx_kthread+0x10/0x10
+[ 5595.839329]  ret_from_fork+0x131/0x150
+[ 5595.839331]  ? __pfx_kthread+0x10/0x10
+[ 5595.839332]  ret_from_fork_asm+0x1a/0x30
+[ 5595.839334]  </TASK>
