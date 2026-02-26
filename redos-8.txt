@@ -1,0 +1,100 @@
+sudo virt-install \
+  --name redos-8 \
+  --memory 4096 \
+  --vcpus 4 \
+  --disk path=/var/lib/libvirt/images/redos-8.qcow2,size=40,format=qcow2 \
+  --disk path=/var/lib/libvirt/images/disk4.img,device=disk,bus=virtio,format=raw,size=30 \
+  --disk path=/var/lib/libvirt/images/disk5.img,device=disk,bus=virtio,format=raw,size=30 \
+  --disk path=/var/lib/libvirt/images/disk6.img,device=disk,bus=virtio,format=raw,size=30 \
+  --cdrom /var/lib/libvirt/boot/redos-8-20250711.4-Everything-x86_64-DVD1.iso \
+  --network bridge=virbr0 \
+  --graphics spice \
+  --os-variant rhel8.0 \
+  --check all=off
+  
+  
+  sudo chown libvirt-qemu:libvirt-qemu /var/lib/libvirt/boot/redos-8-20250711.4-Everything-x86_64-DVD1.iso
+  
+  sudo dnf check-update
+sudo dnf install vdo kmod-kvdo -y
+
+sudo dnf install kmod-kvdo -y
+---------------------------------------
+ариант 1: Очистка вручную (рекомендуется)
+Перед повторным запуском скрипта удалите остатки предыдущей конфигурации:
+bash
+# 1. Удаляем группу томов (это автоматически уберет пометки с PV)
+sudo vgremove p_r5 -y
+
+# 2. Очищаем подписи с дисков для надежности
+sudo wipefs -a /dev/vdb /dev/vdc /dev/vdd
+Используйте код с осторожностью.
+
+Затем запускайте скрипт снова:
+bash
+sudo ./mk_raid5_manually.sh /dev/vdb /dev/vdc /dev/vdd
+Используйте код с осторожностью.
+-----------------------------------
+sudo dnf install fio -y
+
+
+ilya@FL:~/softlockup$ sudo virsh domblklist redos-8
+[sudo: authenticate] Password: 
+ Target   Source
+-------------------------------------------------
+ vda      /var/lib/libvirt/images/redos-8.qcow2
+ vdb      /var/lib/libvirt/images/disk4.img
+ vdc      /var/lib/libvirt/images/disk5.img
+ vdd      /var/lib/libvirt/images/disk6.img
+ sda      -
+
+ilya@FL:~/softlockup$ sudo virsh qemu-monitor-command redos-8 --hmp "info block"
+libvirt-5-format: /var/lib/libvirt/images/redos-8.qcow2 (qcow2)
+    Attached to:      /machine/peripheral/virtio-disk0/virtio-backend
+    Cache mode:       writeback
+
+libvirt-4-storage: /var/lib/libvirt/images/disk4.img (file)
+    Attached to:      /machine/peripheral/virtio-disk1/virtio-backend
+    Cache mode:       writeback
+
+libvirt-3-storage: /var/lib/libvirt/images/disk5.img (file)
+    Attached to:      /machine/peripheral/virtio-disk2/virtio-backend
+    Cache mode:       writeback
+
+libvirt-2-storage: /var/lib/libvirt/images/disk6.img (file)
+    Attached to:      /machine/peripheral/virtio-disk3/virtio-backend
+    Cache mode:       writeback
+
+sata0-0-0: [not inserted]
+    Attached to:      sata0-0-0
+    Removable device: not locked, tray closed
+
+
+sudo virsh detach-disk redos-8 vdd --persistent
+
+[  867.393578] kvdo0:journalQ: Setting UDS index target state to online
+[  867.393588] kvdo0:dedupeQ: creating index: /dev/dm-6
+[  867.393592] kvdo0:dedupeQ: Using 2 indexing zones for concurrency.
+[  867.393600] kvdo0:lvconvert: device '253:7' started
+[  867.393604] kvdo0:lvconvert: resuming device '253:7'
+[  867.402993] kvdo0:lvconvert: device '253:7' resumed
+[  867.423377] kvdo0:packerQ: compression is enabled
+[  919.649491] md: mdX: repair done.
+[ 1389.540283] kvdo0:bioQ1: attempt to access beyond end of device
+               vdd: rw=0, sector=3963288, nr_sectors = 8 limit=0
+[ 1389.552318] mdX_raid5: attempt to access beyond end of device
+               vdd: rw=16384, sector=3963288, nr_sectors = 8 limit=0
+[ 1389.552348] mdX_raid5: attempt to access beyond end of device
+               vdd: rw=1, sector=2746256, nr_sectors = 8 limit=0
+[ 1389.552472] md: dm-5 flush io error -5
+[ 1389.552611] mdX_raid5: attempt to access beyond end of device
+               vdd: rw=0, sector=20850576, nr_sectors = 8 limit=0
+[ 1389.552614] mdX_raid5: attempt to access beyond end of device
+               vdd: rw=1, sector=6200240, nr_sectors = 8 limit=0
+[ 1389.552616] mdX_raid5: attempt to access beyond end of device
+               vdd: rw=16384, sector=20850576, nr_sectors = 8 limit=0
+[ 1389.553321] md/raid:mdX: Disk failure on dm-5, disabling device.
+[ 1389.553989] md/raid:mdX: Operation continuing on 2 devices.
+
+
+
